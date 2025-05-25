@@ -2,12 +2,18 @@
 
 import React from 'react';
 import HeroCarousel from './HeroCarousel';
+import SectionAnimation from './ui/SectionAnimation';
+import { motion } from 'framer-motion';
 
 const HeroSection = () => {
   return (
-    <section className="w-full relative">
+    <SectionAnimation 
+      animation="fadeIn" 
+      className="w-full relative"
+      threshold={0.1}
+    >
       <HeroCarousel />
-    </section>
+    </SectionAnimation>
   );
 };
 

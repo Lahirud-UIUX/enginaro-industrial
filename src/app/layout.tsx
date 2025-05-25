@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NavigationBar from "@/components/NavigationBar";
+import ScrollToTop from "@/components/ScrollToTop";
 
 // Primary Font: Geist for headings and titles
 const geistSans = Geist({
@@ -43,6 +44,7 @@ export default function RootLayout({
         <main>
           {children}
         </main>
+        <ScrollToTop />
       </body>
     </html>
   );
