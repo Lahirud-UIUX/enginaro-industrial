@@ -43,6 +43,9 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
   const [canScrollLeft, setCanScrollLeft] = React.useState(false);
   const [canScrollRight, setCanScrollRight] = React.useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
   useEffect(() => {
     if (carouselRef.current) {
@@ -67,7 +70,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
     }
   };
 
-  const scrollLeft = () => {
+  const scrollLeftButton = () => {
     if (carouselRef.current) {
       carouselRef.current.scrollBy({ left: -300, behavior: "smooth" });
       
@@ -78,7 +81,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
     }
   };
 
-  const scrollRight = () => {
+  const scrollRightButton = () => {
     if (carouselRef.current) {
       carouselRef.current.scrollBy({ left: 300, behavior: "smooth" });
       
@@ -87,6 +90,66 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
         checkScrollability();
       }, 500); // Half a second should be enough for the scroll animation
     }
+  };
+
+  // Mouse drag handlers
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!carouselRef.current) return;
+    
+    setIsDragging(true);
+    setStartX(e.pageX - carouselRef.current.offsetLeft);
+    setScrollLeft(carouselRef.current.scrollLeft);
+    document.body.style.cursor = 'grabbing';
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !carouselRef.current) return;
+    
+    // Prevent default browser behavior (like text selection)
+    e.preventDefault();
+    
+    const x = e.pageX - carouselRef.current.offsetLeft;
+    const walk = (x - startX) * 2; // Adjust scrolling speed
+    carouselRef.current.scrollLeft = scrollLeft - walk;
+    checkScrollability();
+    
+    // Prevent text selection during drag
+    window.getSelection()?.removeAllRanges();
+    return false;
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+    document.body.style.cursor = 'default';
+  };
+
+  const handleMouseLeave = () => {
+    if (isDragging) {
+      setIsDragging(false);
+      document.body.style.cursor = 'default';
+    }
+  };
+
+  // Touch handlers for mobile devices
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (!carouselRef.current) return;
+    
+    setIsDragging(true);
+    setStartX(e.touches[0].pageX - carouselRef.current.offsetLeft);
+    setScrollLeft(carouselRef.current.scrollLeft);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDragging || !carouselRef.current) return;
+    
+    const x = e.touches[0].pageX - carouselRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    carouselRef.current.scrollLeft = scrollLeft - walk;
+    checkScrollability();
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
   };
 
   const handleCardClose = (index: number) => {
@@ -127,17 +190,27 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
     <CarouselContext.Provider
       value={{ onCardClose: handleCardClose, currentIndex }}
     >
-      <div className="relative w-full">
+      <div className="relative w-full select-none">
         {/* Carousel container with overflow visible */}
-        <div className="overflow-visible py-10 md:py-16 w-screen -ml-[calc(50vw-50%)]">
+        <div className="overflow-visible py-10 md:py-16 w-screen -ml-[calc(50vw-50%)] select-none"
+             style={{ WebkitUserSelect: 'none', MozUserSelect: 'none', msUserSelect: 'none', userSelect: 'none' }}>
           <div
-            className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth
-                      [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden pl-[calc(50vw-50%)]"
+            className={`flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth
+                      [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden pl-[calc(50vw-50%)] 
+                      ${isDragging ? 'cursor-grabbing' : 'cursor-grab'} select-none`}
             ref={carouselRef}
             onScroll={checkScrollability}
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseLeave}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            style={{ WebkitUserSelect: 'none', MozUserSelect: 'none', msUserSelect: 'none', userSelect: 'none' }}
           >
             <div
-              className="flex flex-row justify-start pl-4 max-w-[90vw] mx-auto gap-4 md:gap-6 xl:gap-8 md:max-w-[75vw] xl:max-w-[66vw] 2xl:max-w-[60vw]"
+              className="flex flex-row justify-start pl-4 max-w-[90vw] mx-auto gap-4 md:gap-6 xl:gap-8 md:max-w-[75vw] xl:max-w-[66vw] 2xl:max-w-[60vw] select-none"
             >
               {items.map((item, index) => (
                 <motion.div
@@ -156,7 +229,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                     },
                   }}
                   key={"card" + index}
-                  className="last:pr-[5%] md:last:pr-[33%] rounded-3xl"
+                  className="last:pr-[5%] md:last:pr-[33%] rounded-3xl select-none"
                 >
                   {item}
                 </motion.div>
@@ -172,7 +245,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
               "flex h-12 w-12 items-center justify-center rounded-full bg-[#FF6301] transition-opacity duration-300",
               !canScrollLeft && "opacity-50 cursor-not-allowed"
             )}
-            onClick={scrollLeft}
+            onClick={scrollLeftButton}
             disabled={!canScrollLeft}
             aria-label="Scroll left"
           >
@@ -183,7 +256,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
               "flex h-12 w-12 items-center justify-center rounded-full bg-[#FF6301] transition-opacity duration-300",
               !canScrollRight && "opacity-50 cursor-not-allowed"
             )}
-            onClick={scrollRight}
+            onClick={scrollRightButton}
             disabled={!canScrollRight}
             aria-label="Scroll right"
           >
@@ -277,37 +350,38 @@ export const Card = ({
       </AnimatePresence>
       
       {/* New Card Design */}
-      <div className="group/canvas-card">
+      <div className="group/canvas-card select-none">
         <div className="rounded-[32px] p-[32px] overflow-hidden flex flex-col w-[384px] h-[640px] 
-                       items-start justify-start relative z-10 max-lg:w-[288px] max-lg:h-[456px]">
-          <div className="relative z-40 flex flex-col gap-[16px]">
+                       items-start justify-start relative z-10 max-lg:w-[288px] max-lg:h-[456px] select-none">
+          <div className="relative z-40 flex flex-col gap-[16px] select-none">
             <p className="text-[#efefef] text-[24px] md:text-3xl poppins-medium leading-[32px] max-w-xs text-left
-                          [text-wrap:balance] font-sans mt-2 h-[73px] flex items-center">
+                          [text-wrap:balance] font-sans mt-2 h-[73px] flex items-center select-none">
               {card.title}
             </p>
-            <p className="text-[#f5f5f5] inter-regular text-[16px] leading-[26px] md:text-xl font-medium text-left mt-2 tracking-[0]">
+            <p className="text-[#f5f5f5] inter-regular text-[16px] leading-[26px] md:text-xl font-medium text-left mt-2 tracking-[0] select-none">
               {card.description || "We create innovative solutions tailored to your business needs, driving growth and efficiency through technology."}
             </p>
           </div>
           
-          <div className="h-full w-full bg-black absolute inset-0">
+          <div className="h-full w-full bg-black absolute inset-0 select-none">
             {/* Background Image */}
-            <div className="h-full w-full">
-              <div className="absolute inset-0 h-full w-full overflow-hidden">
+            <div className="h-full w-full select-none">
+              <div className="absolute inset-0 h-full w-full overflow-hidden select-none">
                 <Image
                   src={card.src}
                   alt={card.title}
-                  className="w-full h-full object-cover object-center"
-                  style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0}}
+                  className="w-full h-full object-cover object-center select-none pointer-events-none"
+                  style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, userSelect: 'none'}}
                   width={1000}
                   height={1000}
+                  draggable="false"
                 />
               </div>
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-950 to-[84%]"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-950 to-[84%] select-none"></div>
           </div>
           
-          <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90"></div>
+          <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90 select-none pointer-events-none"></div>
         </div>
       </div>
     </>

@@ -23,10 +23,10 @@ const DummyContent = () => {
         return (
           <div
             key={"dummy-content" + index}
-            className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
+            className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4 select-none"
           >
-            <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
-              <span className="font-bold text-neutral-700 dark:text-neutral-200">
+            <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto select-none">
+              <span className="font-bold text-neutral-700 dark:text-neutral-200 select-none">
                 Innovative solutions for modern challenges.
               </span>{" "}
               We leverage cutting-edge technology to deliver results that exceed expectations 
@@ -37,7 +37,9 @@ const DummyContent = () => {
               alt="Macbook mockup from Aceternity UI"
               height={500}
               width={500}
-              className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
+              className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain select-none pointer-events-none"
+              draggable="false"
+              style={{ userSelect: 'none' }}
             />
           </div>
         );
