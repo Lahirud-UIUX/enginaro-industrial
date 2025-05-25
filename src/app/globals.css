@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F5F5F5;
+  --foreground: #171717;
+  --primary: #ff6301;
+  --font-primary: var(--font-geist-sans);
+  --font-secondary: var(--font-inter);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-secondary);
+}
+
+/* Typography styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+}
+
+p, span, div {
+  font-family: var(--font-secondary);
+}
+
+button, a {
+  font-family: var(--font-secondary);
+}
+
+/* Navigation styles */
+.nav-link {
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+/* Carousel styles */
+.duration-2000 {
+  transition-duration: 2000ms;
+}
+
+/* Add a subtle fade animation for very smooth transitions */
+.carousel-fade {
+  animation-name: carouselFade;
+  animation-duration: 2s;
+}
+
+@keyframes carouselFade {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
