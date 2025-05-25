@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
+import Image from "next/image";
 
 export default function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => (
@@ -29,13 +30,13 @@ const DummyContent = () => {
                 Innovative solutions for modern challenges.
               </span>{" "}
               We leverage cutting-edge technology to deliver results that exceed expectations 
-              and drive your business forward in today's competitive landscape.
+              and drive your business forward in today&apos;s competitive landscape.
             </p>
-            <img
+            <Image
               src="https://assets.aceternity.com/macbook.png"
               alt="Macbook mockup from Aceternity UI"
-              height="500"
-              width="500"
+              height={500}
+              width={500}
               className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
             />
           </div>

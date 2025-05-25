@@ -5,6 +5,7 @@ import React, {
   useState,
   createContext,
   useContext,
+  useCallback,
 } from "react";
 import {
   IconArrowNarrowLeft,
@@ -205,7 +206,12 @@ export const Card = ({
 }) => {
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const { onCardClose, currentIndex } = useContext(CarouselContext);
+  const { onCardClose } = useContext(CarouselContext);
+
+  const handleClose = useCallback(() => {
+    setOpen(false);
+    onCardClose(index);
+  }, [setOpen, onCardClose, index]);
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -223,18 +229,9 @@ export const Card = ({
 
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [open]);
+  }, [open, handleClose]);
 
-  useOutsideClick(containerRef as React.RefObject<HTMLDivElement>, () => handleClose());
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-    onCardClose(index);
-  };
+  useOutsideClick(containerRef as React.RefObject<HTMLDivElement>, handleClose);
 
   return (
     <>
@@ -297,11 +294,13 @@ export const Card = ({
             {/* Background Image */}
             <div className="h-full w-full">
               <div className="absolute inset-0 h-full w-full overflow-hidden">
-                <img
+                <Image
                   src={card.src}
                   alt={card.title}
                   className="w-full h-full object-cover object-center"
                   style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0}}
+                  width={1000}
+                  height={1000}
                 />
               </div>
             </div>
@@ -326,7 +325,7 @@ export const BlurImage = ({
 }: ImageProps) => {
   const [isLoading, setLoading] = useState(true);
   return (
-    <img
+    <Image
       className={cn(
         "transition duration-300",
         isLoading ? "blur-sm" : "blur-0",

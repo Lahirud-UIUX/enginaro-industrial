@@ -19,7 +19,7 @@ const AboutSection = () => {
               <p className="text-[#3D3D3D] text-lg font-secondary">
                 We turn complex engineering ideas into practical, high-performance solutions. 
                 Our expert team delivers reliable, ready-to-build results through smart design, 
-                simulation, prototyping, and fabrication.
+                simulation, prototyping, & fabrication.
               </p>
               
               <button className="bg-primary text-white rounded-full py-3 px-6 flex items-center 
