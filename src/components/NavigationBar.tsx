@@ -49,121 +49,123 @@ const NavigationBar = () => {
 
   return (
     <>
-      <motion.nav 
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className={`max-w-[1300px] w-full h-20 rounded-[100px] ${scrolled ? 'bg-black dark:bg-dark-surface shadow-lg' : 'bg-black/90 dark:bg-dark-surface/90'} flex items-center justify-between ${isMobile ? 'px-[20px] mx-[20px] w-[calc(100%-40px)]' : 'px-4'} fixed top-8 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300`}
-      >
-        {/* Logo */}
-        <motion.div 
-          whileHover={{ scale: 1.05 }}
-          transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          className="w-[207px] h-12 mx-4 flex items-center justify-center"
+      <div className={isMobile ? 'px-[20px] w-full' : 'w-full'}>
+        <motion.nav 
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className={`${isMobile ? 'w-full' : 'max-w-[1300px] mx-auto'} h-20 rounded-[100px] ${scrolled ? 'bg-black dark:bg-dark-surface shadow-lg' : 'bg-black/90 dark:bg-dark-surface/90'} flex items-center justify-between px-4 fixed top-8 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300`}
         >
-          <div className="w-[201px] h-[46px] relative">
-            <Image 
-              src={Logo}
-              alt="Enginaro Industrial Logo" 
-              fill 
-              style={{ objectFit: 'contain' }}
-              priority
-              onError={(e) => {
-                // Fallback to the public directory if the import fails
-                const target = e.target as HTMLImageElement;
-                target.src = '/Logo.png';
-              }}
-            />
-          </div>
-        </motion.div>
-
-        {/* Navigation Links - Desktop */}
-        <div className={`${!isMobile ? 'flex' : 'hidden'} items-center justify-center flex-1 mx-4`}>
+          {/* Logo */}
           <motion.div 
-            variants={staggerContainer}
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            className="w-[207px] h-12 mx-4 flex items-center justify-center"
+          >
+            <div className="w-[201px] h-[46px] relative">
+              <Image 
+                src={Logo}
+                alt="Enginaro Industrial Logo" 
+                fill 
+                style={{ objectFit: 'contain' }}
+                priority
+                onError={(e) => {
+                  // Fallback to the public directory if the import fails
+                  const target = e.target as HTMLImageElement;
+                  target.src = '/Logo.png';
+                }}
+              />
+            </div>
+          </motion.div>
+
+          {/* Navigation Links - Desktop */}
+          <div className={`${!isMobile ? 'flex' : 'hidden'} items-center justify-center flex-1 mx-4`}>
+            <motion.div 
+              variants={staggerContainer}
+              initial="hidden"
+              animate="visible"
+              className="flex space-x-4"
+            >
+              {/* Home Button (Active) */}
+              <motion.div variants={fadeInUp}>
+                <Link href="/" className="w-[122px] h-12 flex items-center justify-center nav-link font-secondary">
+                  <motion.span 
+                    whileHover={{ scale: 1.1 }}
+                    className="text-primary"
+                  >
+                    Home
+                  </motion.span>
+                </Link>
+              </motion.div>
+              
+              {/* About Button */}
+              <motion.div variants={fadeInUp}>
+                <Link href="/about" className="w-[122px] h-12 flex items-center justify-center nav-link font-secondary">
+                  <motion.span 
+                    whileHover={{ scale: 1.1 }}
+                    className="text-white"
+                  >
+                    About Us
+                  </motion.span>
+                </Link>
+              </motion.div>
+              
+              {/* Services Button */}
+              <motion.div variants={fadeInUp}>
+                <Link href="/services" className="w-[122px] h-12 flex items-center justify-center nav-link font-secondary">
+                  <motion.span 
+                    whileHover={{ scale: 1.1 }}
+                    className="text-white"
+                  >
+                    Services
+                  </motion.span>
+                </Link>
+              </motion.div>
+              
+              {/* Blog Button */}
+              <motion.div variants={fadeInUp}>
+                <Link href="/blog" className="w-[122px] h-12 flex items-center justify-center nav-link font-secondary">
+                  <motion.span 
+                    whileHover={{ scale: 1.1 }}
+                    className="text-white"
+                  >
+                    Projects
+                  </motion.span>
+                </Link>
+              </motion.div>
+            </motion.div>
+          </div>
+          
+          {/* Contact Us Button - Desktop */}
+          <motion.div 
+            variants={fadeIn}
             initial="hidden"
             animate="visible"
-            className="flex space-x-4"
+            className={`${!isMobile ? 'block' : 'hidden'}`}
           >
-            {/* Home Button (Active) */}
-            <motion.div variants={fadeInUp}>
-              <Link href="/" className="w-[122px] h-12 flex items-center justify-center nav-link font-secondary">
-                <motion.span 
-                  whileHover={{ scale: 1.1 }}
-                  className="text-primary"
-                >
-                  Home
-                </motion.span>
-              </Link>
-            </motion.div>
-            
-            {/* About Button */}
-            <motion.div variants={fadeInUp}>
-              <Link href="/about" className="w-[122px] h-12 flex items-center justify-center nav-link font-secondary">
-                <motion.span 
-                  whileHover={{ scale: 1.1 }}
-                  className="text-white"
-                >
-                  About Us
-                </motion.span>
-              </Link>
-            </motion.div>
-            
-            {/* Services Button */}
-            <motion.div variants={fadeInUp}>
-              <Link href="/services" className="w-[122px] h-12 flex items-center justify-center nav-link font-secondary">
-                <motion.span 
-                  whileHover={{ scale: 1.1 }}
-                  className="text-white"
-                >
-                  Services
-                </motion.span>
-              </Link>
-            </motion.div>
-            
-            {/* Blog Button */}
-            <motion.div variants={fadeInUp}>
-              <Link href="/blog" className="w-[122px] h-12 flex items-center justify-center nav-link font-secondary">
-                <motion.span 
-                  whileHover={{ scale: 1.1 }}
-                  className="text-white"
-                >
-                  Projects
-                </motion.span>
-              </Link>
-            </motion.div>
-          </motion.div>
-        </div>
-        
-        {/* Contact Us Button - Desktop */}
-        <motion.div 
-          variants={fadeIn}
-          initial="hidden"
-          animate="visible"
-          className={`${!isMobile ? 'block' : 'hidden'}`}
-        >
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Link 
-              href="/contact" 
-              className="w-[134px] h-12 rounded-full bg-primary text-white flex items-center justify-center hover:bg-white hover:text-primary transition-colors duration-300 font-secondary"
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              Contact Us
-            </Link>
+              <Link 
+                href="/contact" 
+                className="w-[134px] h-12 rounded-full bg-primary text-white flex items-center justify-center hover:bg-white hover:text-primary transition-colors duration-300 font-secondary"
+              >
+                Contact Us
+              </Link>
+            </motion.div>
           </motion.div>
-        </motion.div>
-        
-        {/* Mobile Menu Button */}
-        <motion.button 
-          whileTap={{ scale: 0.9 }}
-          className={`${isMobile ? 'block' : 'hidden'} text-white p-2 z-50`}
-          onClick={toggleMenu}
-        >
-          {isMenuOpen ? <X size={24} strokeWidth={1.5} /> : <Menu size={24} strokeWidth={1.5} />}
-        </motion.button>
-      </motion.nav>
+          
+          {/* Mobile Menu Button */}
+          <motion.button 
+            whileTap={{ scale: 0.9 }}
+            className={`${isMobile ? 'block' : 'hidden'} text-white p-2 z-50`}
+            onClick={toggleMenu}
+          >
+            {isMenuOpen ? <X size={24} strokeWidth={1.5} /> : <Menu size={24} strokeWidth={1.5} />}
+          </motion.button>
+        </motion.nav>
+      </div>
 
       {/* Full Screen Mobile Menu */}
       <AnimatePresence>
