@@ -130,8 +130,8 @@ const IndustriesSection = () => {
           viewport={{ once: true }}
           className="mb-2"
         >
-          <p className="text-[#3D3D3D] text-sm font-secondary uppercase tracking-wider">INDUSTRIES</p>
-          <h2 className="text-4xl font-bold text-black font-primary mt-1">Industries We Serve</h2>
+          <p className="text-[#3D3D3D] dark:text-white text-sm font-secondary uppercase tracking-wider">INDUSTRIES</p>
+          <h2 className="text-4xl font-bold text-black dark:text-white font-primary mt-1">Industries We Serve</h2>
         </motion.div>
         
         <motion.p 
@@ -139,7 +139,7 @@ const IndustriesSection = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
           viewport={{ once: true }}
-          className="text-[#3D3D3D] font-secondary mt-4"
+          className="text-[#3D3D3D] dark:text-white font-secondary mt-4"
         >
           We work with a wide range of industries—delivering smart, practical, and scalable engineering solutions that fit real-world needs.
         </motion.p>

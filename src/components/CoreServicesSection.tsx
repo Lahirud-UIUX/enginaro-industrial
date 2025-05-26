@@ -27,7 +27,7 @@ const CoreServicesSection = () => {
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
               viewport={{ once: true }}
-              className="text-[#3D3D3D] text-sm font-secondary uppercase"
+              className="text-[#3D3D3D] dark:text-white text-sm font-secondary uppercase"
             >
               CORE SERVICES
             </motion.p>
@@ -36,7 +36,7 @@ const CoreServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.5 }}
               viewport={{ once: true }}
-              className="text-4xl font-bold text-black font-primary"
+              className="text-4xl font-bold text-black dark:text-white font-primary"
             >
               What We Do Best
             </motion.h2>
@@ -47,7 +47,7 @@ const CoreServicesSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-[#3D3D3D] font-secondary mb-6"
+            className="text-[#3D3D3D] dark:text-white font-secondary mb-6"
           >
             From design to delivery, we offer complete engineering solutions that help you build smarter, 
             faster, and stronger. Explore our core services that power real-world innovation.

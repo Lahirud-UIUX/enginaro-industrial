@@ -36,9 +36,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark:bg-dark-background">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased relative bg-background`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased relative bg-background dark:bg-dark-background`}
       >
         <NavigationBar />
         <main>

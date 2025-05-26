@@ -6,6 +6,7 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'media',
   theme: {
     extend: {
       colors: {
@@ -13,6 +14,12 @@ const config: Config = {
         black: '#000000',
         white: '#ffffff',
         background: '#F5F5F5',
+        'dark-background': '#0a0a0a',
+        'dark-card': '#111111',
+        'dark-surface': '#1a1a1a',
+        'dark-border': '#333333',
+        'dark-text': '#ededed',
+        'dark-text-secondary': '#a0a0a0',
       },
       fontFamily: {
         primary: ['var(--font-geist-sans)'],

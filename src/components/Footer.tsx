@@ -18,13 +18,13 @@ import { fadeIn, fadeInUp, staggerContainer } from '@/utils/animations';
 
 const Footer = () => {
   return (
-    <footer className="w-full mx-auto mb-8 mt-16 px-[70px]">
+    <footer className="w-full mx-auto mb-8 mt-16 px-[20px]">
       <SectionAnimation 
         animation="fadeIn" 
         className="w-full"
         id="footer"
       >
-        <div className="bg-black rounded-3xl p-6 md:p-16">
+        <div className="bg-black dark:bg-dark-surface rounded-3xl p-6 md:p-16">
           {/* Main footer content */}
           <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-0 mb-16">
             {/* Company Info Section */}
@@ -50,17 +50,17 @@ const Footer = () => {
                 Engineering solutions that turn ideas into real-world innovations — from smart design to reliable manufacturing.
               </p>
               <motion.div variants={staggerContainer} initial="hidden" animate="visible" className="flex gap-2">
-                <motion.div variants={fadeInUp} whileHover={{ scale: 1.1, y: -5 }} className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                  <FacebookIcon className="text-[#3D15B8] w-5 h-5" />
+                <motion.div variants={fadeInUp} whileHover={{ scale: 1.1, y: -5 }} className="w-12 h-12 bg-white dark:bg-dark-card rounded-full flex items-center justify-center">
+                  <FacebookIcon className="text-[#3D15B8] dark:text-primary w-5 h-5" />
                 </motion.div>
-                <motion.div variants={fadeInUp} whileHover={{ scale: 1.1, y: -5 }} className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                  <InstagramIcon className="text-[#3D15B8] w-5 h-5" />
+                <motion.div variants={fadeInUp} whileHover={{ scale: 1.1, y: -5 }} className="w-12 h-12 bg-white dark:bg-dark-card rounded-full flex items-center justify-center">
+                  <InstagramIcon className="text-[#3D15B8] dark:text-primary w-5 h-5" />
                 </motion.div>
-                <motion.div variants={fadeInUp} whileHover={{ scale: 1.1, y: -5 }} className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                  <TwitterIcon className="text-[#3D15B8] w-5 h-5" />
+                <motion.div variants={fadeInUp} whileHover={{ scale: 1.1, y: -5 }} className="w-12 h-12 bg-white dark:bg-dark-card rounded-full flex items-center justify-center">
+                  <TwitterIcon className="text-[#3D15B8] dark:text-primary w-5 h-5" />
                 </motion.div>
-                <motion.div variants={fadeInUp} whileHover={{ scale: 1.1, y: -5 }} className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                  <LinkedinIcon className="text-[#3D15B8] w-5 h-5" />
+                <motion.div variants={fadeInUp} whileHover={{ scale: 1.1, y: -5 }} className="w-12 h-12 bg-white dark:bg-dark-card rounded-full flex items-center justify-center">
+                  <LinkedinIcon className="text-[#3D15B8] dark:text-primary w-5 h-5" />
                 </motion.div>
               </motion.div>
             </motion.div>
@@ -174,7 +174,7 @@ const Footer = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
-            className="flex flex-col md:flex-row justify-between text-[#9CA3AF] text-xs"
+            className="flex flex-col md:flex-row justify-between text-[#9CA3AF] dark:text-white text-xs"
           >
             <p>Copyright © {new Date().getFullYear()} Enginaro Industrial Solutions. All rights reserved.</p>
             <p>Designed and Developed by glazegen</p>

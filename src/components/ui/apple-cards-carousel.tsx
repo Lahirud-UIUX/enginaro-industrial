@@ -315,7 +315,7 @@ export const Card = ({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 h-full w-full bg-black/80 backdrop-blur-lg"
+              className="fixed inset-0 h-full w-full bg-black/80 dark:bg-black/90 backdrop-blur-lg"
             />
             <motion.div
               initial={{ opacity: 0 }}
@@ -323,7 +323,7 @@ export const Card = ({
               exit={{ opacity: 0 }}
               ref={containerRef}
               layoutId={layout ? `card-${card.title}` : undefined}
-              className="relative z-[60] mx-auto my-10 h-fit max-w-5xl rounded-3xl bg-white p-4 font-sans md:p-10 dark:bg-neutral-900"
+              className="relative z-[60] mx-auto my-10 h-fit max-w-5xl rounded-3xl bg-white dark:bg-dark-card p-4 font-sans md:p-10"
             >
               <button
                 className="sticky top-4 right-0 ml-auto flex h-8 w-8 items-center justify-center rounded-full bg-black dark:bg-white"
@@ -339,7 +339,7 @@ export const Card = ({
               </motion.p>
               <motion.p
                 layoutId={layout ? `title-${card.title}` : undefined}
-                className="mt-4 text-2xl font-semibold text-neutral-700 md:text-5xl dark:text-white"
+                className="mt-4 text-2xl font-semibold text-neutral-700 dark:text-white md:text-5xl"
               >
                 {card.title}
               </motion.p>
@@ -352,10 +352,10 @@ export const Card = ({
       {/* New Card Design */}
       <div className="group/canvas-card select-none">
         <div className="rounded-[32px] p-[32px] overflow-hidden flex flex-col w-[384px] h-[640px] 
-                       items-start justify-start relative z-10 max-lg:w-[288px] max-lg:h-[456px] select-none">
+                      items-start justify-start relative z-10 max-lg:w-[288px] max-lg:h-[456px] select-none">
           <div className="relative z-40 flex flex-col gap-[16px] select-none">
             <p className="text-[#efefef] text-[24px] md:text-3xl poppins-medium leading-[32px] max-w-xs text-left
-                          [text-wrap:balance] font-sans mt-2 h-[73px] flex items-center select-none">
+                         [text-wrap:balance] font-sans mt-2 h-[73px] flex items-center select-none">
               {card.title}
             </p>
             <p className="text-[#f5f5f5] inter-regular text-[16px] leading-[26px] md:text-xl font-medium text-left mt-2 tracking-[0] select-none">

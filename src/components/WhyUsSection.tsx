@@ -58,7 +58,7 @@ const FeatureCard = ({ icon: Icon, title, description, index }: FeatureCardProps
       transition={{ duration: 0.5, delay: 0.1 * index }}
       viewport={{ once: true, amount: 0.1 }}
       whileHover={{ y: -10, transition: { duration: 0.3 } }}
-      className="bg-white rounded-3xl p-6 flex flex-col items-center"
+      className="bg-white dark:bg-dark-card rounded-3xl p-6 flex flex-col items-center"
     >
       <motion.div 
         initial={{ scale: 0, opacity: 0 }}
@@ -75,7 +75,7 @@ const FeatureCard = ({ icon: Icon, title, description, index }: FeatureCardProps
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 + (0.1 * index) }}
           viewport={{ once: true }}
-          className="text-[#3D15A2] text-[32px] font-bold leading-tight min-h-[110px] flex flex-col items-center justify-center font-primary"
+          className="text-[#3D15A2] dark:text-[#3D15A2] text-[32px] font-bold leading-tight min-h-[110px] flex flex-col items-center justify-center font-primary"
         >
           <div className="text-center">{line1}</div>
           <div className="text-center">{line2}</div>
@@ -86,7 +86,7 @@ const FeatureCard = ({ icon: Icon, title, description, index }: FeatureCardProps
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 + (0.1 * index) }}
           viewport={{ once: true }}
-          className="text-[#3D3D3D] font-secondary text-[14px] font-semibold"
+          className="text-[#3D3D3D] dark:text-dark-text-secondary font-secondary text-[14px] font-semibold"
         >
           {description}
         </motion.p>
@@ -151,8 +151,8 @@ const WhyUsSection = () => {
             viewport={{ once: true }}
             className="mb-2"
           >
-            <p className="text-[#3D3D3D] text-sm font-secondary uppercase">WHY US</p>
-            <h2 className="text-4xl font-bold text-black font-primary">Why Choose Enginaro?</h2>
+            <p className="text-[#3D3D3D] dark:text-white text-sm font-secondary uppercase">WHY US</p>
+            <h2 className="text-4xl font-bold text-black dark:text-white font-primary">Why Choose Enginaro?</h2>
           </motion.div>
           
           <motion.p 
@@ -160,7 +160,7 @@ const WhyUsSection = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
-            className="text-[#3D3D3D] font-secondary"
+            className="text-[#3D3D3D] dark:text-white font-secondary"
           >
             We're more than just engineers — we're your innovation partners. From idea to execution, 
             we bring the tools, skills, and speed to help you succeed in today's fast-moving industrial world.

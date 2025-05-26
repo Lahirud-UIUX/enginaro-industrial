@@ -34,12 +34,12 @@ const AboutSection = () => {
                 transition: { duration: 0.5, ease: "easeOut" }
               }
             }}
-            className="bg-white rounded-3xl p-8 flex-1"
+            className="bg-white dark:bg-dark-card rounded-3xl p-8 flex-1"
           >
             <div className="h-full max-w-[578px] mx-auto flex flex-col gap-6">
-              <h2 className="text-4xl font-bold text-black mt-8 font-primary">WHO WE ARE?</h2>
+              <h2 className="text-4xl font-bold text-black dark:text-black mt-8 font-primary">WHO WE ARE?</h2>
               
-              <p className="text-[#3D3D3D] text-lg font-secondary">
+              <p className="text-[#3D3D3D] dark:text-[#3D3D3D] text-lg font-secondary">
                 We turn complex engineering ideas into practical, high-performance solutions. 
                 Our expert team delivers reliable, ready-to-build results through smart design, 
                 simulation, prototyping, & fabrication.
@@ -69,7 +69,7 @@ const AboutSection = () => {
                   transition: { duration: 0.5, ease: "easeOut", delay: 0.2 }
                 }
               }}
-              className="bg-white rounded-3xl p-6 flex-1"
+              className="bg-white dark:bg-dark-card rounded-3xl p-6 flex-1"
             >
               <div className="h-full flex flex-col">
                 <motion.div 
@@ -79,12 +79,12 @@ const AboutSection = () => {
                   viewport={{ once: true }}
                   className="mb-4"
                 >
-                  <Wrench size={24} strokeWidth={1} className="text-black" />
+                  <Wrench size={24} strokeWidth={1} className="text-black dark:text-black" />
                 </motion.div>
                 
                 <div className="flex flex-col gap-4">
-                  <h3 className="text-2xl font-bold text-black font-primary">Our Expertise, Your Advantage</h3>
-                  <p className="text-[#3D3D3D] font-secondary">
+                  <h3 className="text-2xl font-bold text-black dark:text-black font-primary">Our Expertise, Your Advantage</h3>
+                  <p className="text-[#3D3D3D] dark:text-[#3D3D3D] font-secondary">
                     We design, test, and build engineering solutions that work in the real world—quickly and accurately.
                   </p>
                 </div>
@@ -101,7 +101,7 @@ const AboutSection = () => {
                   transition: { duration: 0.5, ease: "easeOut", delay: 0.4 }
                 }
               }}
-              className="bg-white rounded-3xl p-6 flex-1"
+              className="bg-white dark:bg-dark-card rounded-3xl p-6 flex-1"
             >
               <div className="h-full flex flex-col">
                 <motion.div 
@@ -111,12 +111,12 @@ const AboutSection = () => {
                   viewport={{ once: true }}
                   className="mb-4"
                 >
-                  <Zap size={24} strokeWidth={1} className="text-black" />
+                  <Zap size={24} strokeWidth={1} className="text-black dark:text-black" />
                 </motion.div>
                 
                 <div className="flex flex-col gap-4">
-                  <h3 className="text-2xl font-bold text-black font-primary">Innovation That Delivers</h3>
-                  <p className="text-[#3D3D3D] font-secondary">
+                  <h3 className="text-2xl font-bold text-black dark:text-black font-primary">Innovation That Delivers</h3>
+                  <p className="text-[#3D3D3D] dark:text-[#3D3D3D] font-secondary">
                     We use smart tools and modern technology to help your ideas become real products.
                   </p>
                 </div>
