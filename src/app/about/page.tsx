@@ -470,7 +470,7 @@ const AboutPage = () => {
 };
 
 // Helper Components
-const ScrollAnimatedSection = ({ children, className = "" }) => {
+const ScrollAnimatedSection = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -489,7 +489,17 @@ const ScrollAnimatedSection = ({ children, className = "" }) => {
   );
 };
 
-const ValueCard = ({ icon: Icon, title, description, index }) => {
+const ValueCard = ({ 
+  icon: Icon, 
+  title, 
+  description, 
+  index 
+}: { 
+  icon: React.ElementType; 
+  title: string; 
+  description: string; 
+  index: number 
+}) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -519,7 +529,7 @@ const ValueCard = ({ icon: Icon, title, description, index }) => {
   );
 };
 
-const TeamMember = ({ index }) => {
+const TeamMember = ({ index }: { index: number }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
