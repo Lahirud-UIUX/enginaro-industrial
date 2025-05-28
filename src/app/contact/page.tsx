@@ -120,7 +120,7 @@ const ContactPage = () => {
             className="w-full lg:w-1/2 space-y-4"
           >
             {/* Image Section */}
-            <div className="relative w-full h-[473px] rounded-3xl overflow-hidden">
+            <div className="relative w-full h-[600px] rounded-3xl overflow-hidden">
               <Image 
                 src="/images/contact-us.jpg" 
                 alt="Contact Enginaro Industrial" 
@@ -136,20 +136,6 @@ const ContactPage = () => {
                 <p className="text-gray-600">
                   We'd love to hear from you! Whether you're interested in partnering with us, learning more about our programs, or joining our mission, feel free to reach out.
                 </p>
-                
-                {/* Contact Card */}
-                <div className="mt-8 bg-gray-100 rounded-xl p-8 flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="#FF6301" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                  
-                  <div>
-                    <h3 className="font-medium text-gray-900">General Inquiries</h3>
-                    <p className="text-sm text-gray-600 mt-2">enginaroindustrialsolutions@gmail.com</p>
-                  </div>
-                </div>
                 
                 {/* Social Media Section */}
                 <div className="mt-8">

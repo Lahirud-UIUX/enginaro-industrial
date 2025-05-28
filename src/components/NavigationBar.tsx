@@ -91,7 +91,7 @@ const NavigationBar = () => {
                 <Link href="/" className="w-[122px] h-12 flex items-center justify-center nav-link font-secondary">
                   <motion.span 
                     whileHover={{ scale: 1.1 }}
-                    className="text-primary"
+                    className="text-white"
                   >
                     Home
                   </motion.span>
@@ -185,7 +185,7 @@ const NavigationBar = () => {
             >
               {/* Mobile Navigation Links */}
               <motion.div variants={fadeInUp}>
-                <Link href="/" className="text-2xl font-semibold text-primary" onClick={toggleMenu}>
+                <Link href="/" className="text-2xl font-semibold text-white hover:text-primary transition-colors duration-300" onClick={toggleMenu}>
                   Home
                 </Link>
               </motion.div>
