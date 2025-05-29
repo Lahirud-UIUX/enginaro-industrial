@@ -399,18 +399,16 @@ const ProjectCard = ({
             viewport={{ once: true }}
             className="mt-auto"
           >
-            <Link href={`/projects/${project.id}`} onClick={(e) => e.stopPropagation()}>
-              <span className="text-primary font-medium flex items-center gap-2 transition-all duration-300">
-                View Project Details
-                <motion.span
-                  animate={isHovered ? { x: 5 } : { x: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="inline-flex"
-                >
-                  <ArrowUpRight size={18} strokeWidth={1.5} />
-                </motion.span>
-              </span>
-            </Link>
+            <span className="text-primary font-medium flex items-center gap-2 transition-all duration-300">
+              View Project Details
+              <motion.span
+                animate={isHovered ? { x: 5 } : { x: 0 }}
+                transition={{ duration: 0.3 }}
+                className="inline-flex"
+              >
+                <ArrowUpRight size={18} strokeWidth={1.5} />
+              </motion.span>
+            </span>
           </motion.div>
         </div>
       </motion.div>

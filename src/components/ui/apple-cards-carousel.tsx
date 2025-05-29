@@ -339,7 +339,7 @@ export const Card = ({
               </motion.p>
               <motion.p
                 layoutId={layout ? `title-${card.title}` : undefined}
-                className="mt-4 text-2xl font-semibold text-neutral-700 dark:text-white md:text-5xl"
+                className="mt-4 text-2xl font-bold text-neutral-700 dark:text-white md:text-5xl md:leading-[1.2] whitespace-pre-line"
               >
                 {card.title}
               </motion.p>
@@ -354,8 +354,8 @@ export const Card = ({
         <div className="rounded-[32px] p-[32px] overflow-hidden flex flex-col w-[384px] h-[640px] 
                       items-start justify-start relative z-10 max-lg:w-[288px] max-lg:h-[456px] select-none">
           <div className="relative z-40 flex flex-col gap-[16px] select-none">
-            <p className="text-[#efefef] text-[24px] md:text-3xl poppins-medium leading-[32px] max-w-xs text-left
-                         [text-wrap:balance] font-sans mt-2 h-[73px] flex items-center select-none">
+            <p className="text-[#efefef] text-[36px] font-bold leading-[44px] max-w-xs text-left
+                         [text-wrap:balance] font-sans mt-2 h-[88px] flex items-start select-none whitespace-pre-line">
               {card.title}
             </p>
             <p className="text-[#f5f5f5] inter-regular text-[16px] leading-[26px] md:text-xl font-medium text-left mt-2 tracking-[0] select-none">

@@ -120,7 +120,6 @@ const AboutSection = () => {
                   transition={{ delay: 0.3, duration: 0.4 }}
                   viewport={{ once: true }}
                   className="mb-4"
-                  whileHover={{ rotate: [0, -10, 10, -5, 0], transition: { duration: 0.5 } }}
                 >
                   <Wrench size={24} strokeWidth={1} className="text-black dark:text-white" />
                 </motion.div>
@@ -170,7 +169,6 @@ const AboutSection = () => {
                   transition={{ delay: 0.5, duration: 0.4 }}
                   viewport={{ once: true }}
                   className="mb-4"
-                  whileHover={{ scale: 1.2, transition: { duration: 0.3, yoyo: Infinity } }}
                 >
                   <Zap size={24} strokeWidth={1} className="text-black dark:text-white" />
                 </motion.div>

@@ -30,7 +30,7 @@ const HeroCarousel = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-screen overflow-hidden">
       {/* Image Carousel */}
       {carouselImages.map((image, index) => (
         <div 
@@ -52,10 +52,10 @@ const HeroCarousel = () => {
 
       {/* Content */}
       <div className="absolute inset-0 flex items-center justify-center text-center px-4 z-20">
-        <div className="max-w-[640px] flex flex-col space-y-6">
+        <div className="max-w-[640px] w-full flex flex-col space-y-6">
           {/* Main Heading with Gradient */}
           <h1 
-            className="text-4xl md:text-5xl font-bold mb-0 text-center font-primary" 
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-0 text-center font-primary" 
             style={{ 
               background: 'linear-gradient(to bottom, rgba(242, 243, 255, 1), rgba(145, 146, 153, 1))', 
               WebkitBackgroundClip: 'text',
@@ -63,13 +63,13 @@ const HeroCarousel = () => {
               backgroundClip: 'text'
             }}
           >
-            Where Engineeringbr<br/>Meets Excellence
+            Where Engineering<br/>Meets Excellence
           </h1>
           
           <div className="flex flex-col space-y-6">
             {/* Subheading */}
-            <p className="text-white text-opacity-70 text-lg md:text-xl font-secondary">
-              From design to delivery, we empower industrial growth through <br/>smart, scalable, and precise engineering solutions.
+            <p className="text-white text-opacity-70 text-base sm:text-lg md:text-xl font-secondary px-2">
+              From design to delivery, we empower industrial growth through smart, scalable, and precise engineering solutions.
             </p>
             
             {/* Buttons Container */}

@@ -11,8 +11,12 @@ const NavigationBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const [navWidth, setNavWidth] = useState('100%');
 
   useEffect(() => {
+    setMounted(true);
+    
     const handleScroll = () => {
       const isScrolled = window.scrollY > 10;
       if (isScrolled !== scrolled) {
@@ -21,11 +25,22 @@ const NavigationBar = () => {
     };
 
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 1300);
+      const width = window.innerWidth;
+      setIsMobile(width < 1300);
+      
+      // Set consistent nav width based on screen size
+      if (width < 640) {
+        setNavWidth('calc(100% - 40px)');
+      } else if (width < 1300) {
+        setNavWidth('560px'); // Fixed width for tablets
+      } else {
+        setNavWidth('1300px'); // Desktop
+      }
     };
 
-    // Initial check
+    // Initial checks
     handleResize();
+    handleScroll();
 
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
@@ -53,15 +68,16 @@ const NavigationBar = () => {
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className={`${isMobile ? 'w-full' : 'max-w-[1300px] mx-auto'} h-20 rounded-[100px] ${scrolled ? 'bg-black dark:bg-dark-surface shadow-lg' : 'bg-black/90 dark:bg-dark-surface/90'} flex items-center justify-between px-4 fixed top-8 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300`}
+          style={{ width: navWidth }}
+          className={`mx-auto h-20 rounded-[100px] ${scrolled || !mounted ? 'bg-black dark:bg-dark-surface shadow-lg' : 'bg-black/90 dark:bg-dark-surface/90'} flex items-center justify-between px-4 fixed top-8 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300`}
         >
           {/* Logo */}
           <motion.div 
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            className="w-[207px] h-12 mx-4 flex items-center justify-center"
+            className={`${isMobile ? 'w-[160px]' : 'w-[207px]'} h-12 mx-4 flex items-center justify-center`}
           >
-            <div className="w-[201px] h-[46px] relative">
+            <div className={`${isMobile ? 'w-[150px]' : 'w-[201px]'} h-[46px] relative`}>
               <Image 
                 src="/images/logo-new_white.png"
                 alt="Enginaro Industrial Logo" 
