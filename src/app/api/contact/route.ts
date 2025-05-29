@@ -105,19 +105,22 @@ export async function POST(req: Request) {
         { message: 'Message sent successfully!' },
         { status: 200 }
       );
-    } catch (emailError) {
-      console.error('Error sending email:', emailError);
+    } catch (error: unknown) {
+      console.error('Error sending email:', error);
+      
+      // Safe way to extract the error message
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
       
       // Return a more specific error message while still keeping security in mind
       return NextResponse.json(
         { 
           error: 'Failed to send email. Please try again later or contact us directly at enginaro.industrialsolutions@gmail.com',
-          details: process.env.NODE_ENV === 'development' ? emailError.message : undefined
+          details: process.env.NODE_ENV === 'development' ? errorMessage : undefined
         },
         { status: 500 }
       );
     }
-  } catch (error) {
+  } catch (error: unknown) {
     console.error('Error processing contact form:', error);
     return NextResponse.json(
       { error: 'Failed to process your request. Please try again later.' },
