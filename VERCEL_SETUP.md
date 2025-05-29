@@ -21,7 +21,7 @@ This guide will help you set up the Resend email service for your contact form o
 3. Navigate to "Settings" > "Environment Variables"
 4. Add a new environment variable:
    - Name: `RESEND_API_KEY`
-   - Value: Paste your Resend API key
+   - Value: re_5dRpt515_bRdAEiPCreXqx2HhRGPT3FbS
 5. Make sure the environment variable is enabled for Production, Preview, and Development environments
 6. Click "Save"
 
