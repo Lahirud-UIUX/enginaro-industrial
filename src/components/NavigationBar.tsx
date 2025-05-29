@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Logo from '@/images/logo.png';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { fadeIn, fadeInUp, staggerContainer } from '@/utils/animations';
@@ -64,7 +63,7 @@ const NavigationBar = () => {
           >
             <div className="w-[201px] h-[46px] relative">
               <Image 
-                src={Logo}
+                src="/images/logo-new_white.png"
                 alt="Enginaro Industrial Logo" 
                 fill 
                 style={{ objectFit: 'contain' }}

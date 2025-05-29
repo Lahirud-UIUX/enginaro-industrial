@@ -75,16 +75,16 @@ const HeroCarousel = () => {
             {/* Buttons Container */}
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               {/* Primary Button with Icon */}
-              <Link href="/services">
-                <button className="bg-primary text-white px-6 py-3 rounded-full flex items-center justify-center space-x-2 font-secondary">
+              <Link href="/services" className="w-full sm:w-auto">
+                <button className="w-full bg-primary text-white px-6 py-3 rounded-full flex items-center justify-center space-x-2 font-secondary">
                   <span>View Our Services</span>
                   <ArrowRight size={20} strokeWidth={1.5} className="text-white" />
                 </button>
               </Link>
               
               {/* Secondary Button */}
-              <Link href="/contact">
-                <button className="border border-primary text-primary px-6 py-3 rounded-full font-secondary">
+              <Link href="/contact" className="w-full sm:w-auto">
+                <button className="w-full border border-primary text-primary px-6 py-3 rounded-full font-secondary">
                   Get a Quote
                 </button>
               </Link>

@@ -38,7 +38,7 @@ const Footer = () => {
               <div className="mb-4">
                 <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
                   <Image 
-                    src="/Logo.png"
+                    src="/images/logo-new_white.png"
                     alt="Enginaro Industrial Logo" 
                     width={200}
                     height={46}
