@@ -16,6 +16,15 @@ const ContactPage = () => {
     message: ''
   });
 
+  // Form errors
+  const [errors, setErrors] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
   // Form status
   const [status, setStatus] = useState({
     isSubmitting: false,
@@ -24,23 +33,76 @@ const ContactPage = () => {
     message: ''
   });
 
+  // Email validation regex
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   // Handle input changes
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
     setFormData(prev => ({ ...prev, [id]: value }));
+    
+    // Clear error when user types
+    if (errors[id as keyof typeof errors]) {
+      setErrors(prev => ({ ...prev, [id]: '' }));
+    }
+  };
+
+  // Validate form
+  const validateForm = (): boolean => {
+    let isValid = true;
+    const newErrors = { ...errors };
+
+    // Validate first name
+    if (!formData.firstName.trim()) {
+      newErrors.firstName = 'First name is required';
+      isValid = false;
+    }
+
+    // Validate last name
+    if (!formData.lastName.trim()) {
+      newErrors.lastName = 'Last name is required';
+      isValid = false;
+    }
+
+    // Validate email
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+      isValid = false;
+    } else if (!emailRegex.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+      isValid = false;
+    }
+
+    // Validate subject
+    if (!formData.subject.trim()) {
+      newErrors.subject = 'Subject is required';
+      isValid = false;
+    }
+
+    // Validate message
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+      isValid = false;
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = 'Message should be at least 10 characters';
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
   };
 
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Basic validation
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.subject || !formData.message) {
+    // Validate form
+    if (!validateForm()) {
       setStatus({
         isSubmitting: false,
         isSuccess: false,
         isError: true,
-        message: 'Please fill all required fields'
+        message: 'Please fix the errors in the form'
       });
       return;
     }
@@ -80,6 +142,8 @@ const ContactPage = () => {
           subject: '',
           message: ''
         });
+        // Scroll to top of form to show success message
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
         // API error
         setStatus({
@@ -141,7 +205,7 @@ const ContactPage = () => {
                 <div className="flex flex-col sm:flex-row gap-8">
                   <div className="flex-1 space-y-2">
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-900 dark:text-white">
-                      First Name
+                      First Name <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
@@ -149,13 +213,18 @@ const ContactPage = () => {
                       value={formData.firstName}
                       onChange={handleChange}
                       placeholder="Your first name"
-                      className="w-full px-4 py-3 bg-gray-100 dark:bg-[#3D3D3D] rounded-full text-gray-600 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
+                      className={`w-full px-4 py-3 bg-gray-100 dark:bg-[#3D3D3D] rounded-full text-gray-600 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary ${
+                        errors.firstName ? 'border-2 border-red-500' : ''
+                      }`}
                     />
+                    {errors.firstName && (
+                      <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>
+                    )}
                   </div>
                   
                   <div className="flex-1 space-y-2">
                     <label htmlFor="lastName" className="block text-sm font-medium text-gray-900 dark:text-white">
-                      Last Name
+                      Last Name <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
@@ -163,15 +232,20 @@ const ContactPage = () => {
                       value={formData.lastName}
                       onChange={handleChange}
                       placeholder="Your last name"
-                      className="w-full px-4 py-3 bg-gray-100 dark:bg-[#3D3D3D] rounded-full text-gray-600 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
+                      className={`w-full px-4 py-3 bg-gray-100 dark:bg-[#3D3D3D] rounded-full text-gray-600 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary ${
+                        errors.lastName ? 'border-2 border-red-500' : ''
+                      }`}
                     />
+                    {errors.lastName && (
+                      <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>
+                    )}
                   </div>
                 </div>
                 
                 {/* Email field */}
                 <div className="space-y-2">
                   <label htmlFor="email" className="block text-sm font-medium text-gray-900 dark:text-white">
-                    Email Address
+                    Email Address <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="email"
@@ -179,14 +253,19 @@ const ContactPage = () => {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Your email address"
-                    className="w-full px-4 py-3 bg-gray-100 dark:bg-[#3D3D3D] rounded-full text-gray-600 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
+                    className={`w-full px-4 py-3 bg-gray-100 dark:bg-[#3D3D3D] rounded-full text-gray-600 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary ${
+                      errors.email ? 'border-2 border-red-500' : ''
+                    }`}
                   />
+                  {errors.email && (
+                    <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                  )}
                 </div>
                 
                 {/* Subject field */}
                 <div className="space-y-2">
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-900 dark:text-white">
-                    Subject
+                    Subject <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
@@ -194,14 +273,19 @@ const ContactPage = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder="What is this regarding?"
-                    className="w-full px-4 py-3 bg-gray-100 dark:bg-[#3D3D3D] rounded-full text-gray-600 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
+                    className={`w-full px-4 py-3 bg-gray-100 dark:bg-[#3D3D3D] rounded-full text-gray-600 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary ${
+                      errors.subject ? 'border-2 border-red-500' : ''
+                    }`}
                   />
+                  {errors.subject && (
+                    <p className="text-red-500 text-xs mt-1">{errors.subject}</p>
+                  )}
                 </div>
                 
                 {/* Message field */}
                 <div className="space-y-2">
                   <label htmlFor="message" className="block text-sm font-medium text-gray-900 dark:text-white">
-                    Message
+                    Message <span className="text-red-500">*</span>
                   </label>
                   <textarea
                     id="message"
@@ -209,8 +293,13 @@ const ContactPage = () => {
                     onChange={handleChange}
                     placeholder="Tell us about your project or inquiry..."
                     rows={10}
-                    className="w-full px-4 py-3 bg-gray-100 dark:bg-[#3D3D3D] rounded-2xl text-gray-600 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
+                    className={`w-full px-4 py-3 bg-gray-100 dark:bg-[#3D3D3D] rounded-2xl text-gray-600 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary ${
+                      errors.message ? 'border-2 border-red-500' : ''
+                    }`}
                   />
+                  {errors.message && (
+                    <p className="text-red-500 text-xs mt-1">{errors.message}</p>
+                  )}
                 </div>
                 
                 {/* Submit button */}
