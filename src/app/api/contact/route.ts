@@ -83,7 +83,7 @@ export async function POST(req: Request) {
       const { data, error } = await resend.emails.send({
         from: 'Enginaro Contact <onboarding@resend.dev>', // Use your verified domain or the default one
         to: ['enginaro.industrialsolutions@gmail.com'],
-        reply_to: email,
+        replyTo: email,
         subject: `New Contact Form: ${subject}`,
         html: htmlContent,
       });
