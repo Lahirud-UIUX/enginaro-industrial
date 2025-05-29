@@ -1,54 +1,50 @@
 # Contact Form Setup Guide
 
-This guide will help you set up the contact form to send emails properly.
+This guide will help you set up the contact form to send emails properly using Resend.
 
 ## Prerequisites
 
-1. A Gmail account for sending emails
-2. Two-step verification enabled on your Gmail account
-3. An app password generated for your application
+1. A Resend.com account (free tier available)
+2. An API key from Resend
 
 ## Quick Setup
 
-The easiest way to set up the contact form is to run:
+The easiest way to set up the contact form:
 
-```bash
-npm run setup-email
-```
-
-This script will prompt you for your Gmail address and app password, then create the necessary `.env.local` file.
-
-## Manual Setup
-
-If you prefer to set up the form manually:
-
-1. Create a `.env.local` file in the root directory with the following content:
+1. Sign up for a free account at [Resend.com](https://resend.com)
+2. Create an API key in your Resend dashboard
+3. Create a `.env.local` file in the root directory with the following content:
 
 ```
-EMAIL_USER=your_gmail_address@gmail.com
-EMAIL_PASS=your_app_password
+RESEND_API_KEY=your_resend_api_key
 ```
 
-2. Replace `your_gmail_address@gmail.com` with your actual Gmail address
-3. Replace `your_app_password` with the app password you generated
+## Setting Up Resend
 
-## Generating an App Password for Gmail
+1. Create an account at [Resend.com](https://resend.com)
+2. Navigate to the API Keys section in your dashboard
+3. Click "Create API Key"
+4. Give your API key a name (e.g., "Enginaro Contact Form")
+5. Copy the generated API key (you'll only see it once!)
+6. Paste the API key in your `.env.local` file
 
-1. Go to your Google Account settings: https://myaccount.google.com/
-2. Navigate to "Security" 
-3. Under "Signing in to Google," select "2-Step Verification"
-4. At the bottom of the page, select "App passwords"
-5. Set "App" to "Mail" and "Device" to "Other (Custom name)"
-6. Enter a name for your app (e.g., "Enginaro Contact Form")
-7. Click "Generate"
-8. Google will display a 16-character password - copy this password
-9. Use this password in your `.env.local` file
+## Email Sending Domain (Optional but Recommended)
+
+For production use, it's recommended to set up a custom sending domain:
+
+1. In your Resend dashboard, go to "Domains"
+2. Click "Add Domain"
+3. Follow the instructions to verify your domain
+4. Once verified, update the "from" address in the API route:
+   ```javascript
+   from: 'Contact Form <contact@yourdomain.com>'
+   ```
 
 ## How the Contact Form Works
 
 1. When a user submits the contact form, the data is sent to the `/api/contact` endpoint
 2. The server validates the input (required fields, valid email format)
-3. If valid, the server uses Nodemailer to send an email to enginaro.industrialsolutions@gmail.com
+3. If valid, the server uses Resend API to send an email to enginaro.industrialsolutions@gmail.com
 4. The email contains:
    - The user's name
    - The user's email (also set as the reply-to address)
@@ -59,17 +55,23 @@ EMAIL_PASS=your_app_password
 
 If emails aren't being sent, check the following:
 
-1. Verify your Gmail credentials in `.env.local` are correct
-2. Make sure two-step verification is enabled on your Google account
-3. Confirm the app password was generated correctly
-4. Check the server logs for any error messages
-5. If using Gmail, make sure Google hasn't blocked the login attempt (check your Gmail inbox for security alerts)
-6. Verify your Gmail account hasn't reached sending limits
+1. Verify your Resend API key in `.env.local` is correct
+2. Check the Resend dashboard for any sending errors or limits
+3. Check the server logs for any error messages
+4. Make sure your API key has permission to send emails
 
-## Production Deployment
+## Production Deployment on Vercel
 
-When deploying to production:
+1. Add the `RESEND_API_KEY` environment variable in your Vercel project settings:
+   - Go to your project on Vercel
+   - Navigate to Settings > Environment Variables
+   - Add the key `RESEND_API_KEY` with your Resend API key as the value
+2. Deploy your application
+3. Resend works well with serverless functions, so emails should send properly in production
 
-1. Add the `EMAIL_USER` and `EMAIL_PASS` environment variables to your hosting platform (Vercel, Netlify, etc.)
-2. Never commit the `.env.local` file to version control
-3. Consider using a transactional email service (like SendGrid, Mailgun, etc.) for production environments with higher email volumes 
+## Local Testing
+
+For testing locally:
+1. Make sure your `.env.local` file contains your Resend API key
+2. Run the development server with `npm run dev`
+3. Submit the form and check the server console for any errors 
