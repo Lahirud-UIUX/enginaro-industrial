@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Slide1 from '@/images/slide (1).jpg';
 import Slide2 from '@/images/slide (2).jpg';
 import Slide3 from '@/images/slide (3).jpg';
@@ -74,15 +75,19 @@ const HeroCarousel = () => {
             {/* Buttons Container */}
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               {/* Primary Button with Icon */}
-              <button className="bg-primary text-white px-6 py-3 rounded-full flex items-center justify-center space-x-2 font-secondary">
-                <span>View Our Services</span>
-                <ArrowRight size={20} strokeWidth={1.5} className="text-white" />
-              </button>
+              <Link href="/services">
+                <button className="bg-primary text-white px-6 py-3 rounded-full flex items-center justify-center space-x-2 font-secondary">
+                  <span>View Our Services</span>
+                  <ArrowRight size={20} strokeWidth={1.5} className="text-white" />
+                </button>
+              </Link>
               
               {/* Secondary Button */}
-              <button className="border border-primary text-primary px-6 py-3 rounded-full font-secondary">
-                Get a Quote
-              </button>
+              <Link href="/contact">
+                <button className="border border-primary text-primary px-6 py-3 rounded-full font-secondary">
+                  Get a Quote
+                </button>
+              </Link>
             </div>
           </div>
         </div>

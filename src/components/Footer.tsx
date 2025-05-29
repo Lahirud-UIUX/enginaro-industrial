@@ -50,18 +50,46 @@ const Footer = () => {
                 Engineering solutions that turn ideas into real-world innovations — from smart design to reliable manufacturing.
               </p>
               <motion.div variants={staggerContainer} initial="hidden" animate="visible" className="flex gap-2">
-                <motion.div variants={fadeInUp} whileHover={{ scale: 1.1, y: -5 }} className="w-12 h-12 bg-white dark:bg-dark-card rounded-full flex items-center justify-center">
+                <motion.a 
+                  href="https://facebook.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  variants={fadeInUp} 
+                  whileHover={{ scale: 1.1, y: -5 }} 
+                  className="w-12 h-12 bg-white dark:bg-[#1B1B1B] rounded-full flex items-center justify-center"
+                >
                   <FacebookIcon className="text-[#3D15B8] dark:text-primary w-5 h-5" />
-                </motion.div>
-                <motion.div variants={fadeInUp} whileHover={{ scale: 1.1, y: -5 }} className="w-12 h-12 bg-white dark:bg-dark-card rounded-full flex items-center justify-center">
+                </motion.a>
+                <motion.a 
+                  href="https://instagram.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  variants={fadeInUp} 
+                  whileHover={{ scale: 1.1, y: -5 }} 
+                  className="w-12 h-12 bg-white dark:bg-[#1B1B1B] rounded-full flex items-center justify-center"
+                >
                   <InstagramIcon className="text-[#3D15B8] dark:text-primary w-5 h-5" />
-                </motion.div>
-                <motion.div variants={fadeInUp} whileHover={{ scale: 1.1, y: -5 }} className="w-12 h-12 bg-white dark:bg-dark-card rounded-full flex items-center justify-center">
+                </motion.a>
+                <motion.a 
+                  href="https://twitter.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  variants={fadeInUp} 
+                  whileHover={{ scale: 1.1, y: -5 }} 
+                  className="w-12 h-12 bg-white dark:bg-[#1B1B1B] rounded-full flex items-center justify-center"
+                >
                   <TwitterIcon className="text-[#3D15B8] dark:text-primary w-5 h-5" />
-                </motion.div>
-                <motion.div variants={fadeInUp} whileHover={{ scale: 1.1, y: -5 }} className="w-12 h-12 bg-white dark:bg-dark-card rounded-full flex items-center justify-center">
+                </motion.a>
+                <motion.a 
+                  href="https://linkedin.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  variants={fadeInUp} 
+                  whileHover={{ scale: 1.1, y: -5 }} 
+                  className="w-12 h-12 bg-white dark:bg-[#1B1B1B] rounded-full flex items-center justify-center"
+                >
                   <LinkedinIcon className="text-[#3D15B8] dark:text-primary w-5 h-5" />
-                </motion.div>
+                </motion.a>
               </motion.div>
             </motion.div>
 
@@ -153,7 +181,7 @@ const Footer = () => {
                   <motion.div variants={fadeInUp} className="flex gap-2 items-center">
                     <Phone className="text-white w-6 h-6 flex-shrink-0" />
                     <a href="tel:+94077000000" className="text-white text-sm hover:text-gray-300 transition-colors">
-                      +94 077 000 0000
+                      +94 077 7377 736
                     </a>
                   </motion.div>
                 </motion.div>

@@ -11,15 +11,16 @@ const config: Config = {
     extend: {
       colors: {
         primary: '#ff6301',
+        'primary-dark': '#cc5000', 
         black: '#000000',
         white: '#ffffff',
         background: '#F5F5F5',
-        'dark-background': '#0a0a0a',
-        'dark-card': '#111111',
+        'dark-background': '#000000',
+        'dark-card': '#141414',
         'dark-surface': '#1a1a1a',
         'dark-border': '#333333',
-        'dark-text': '#ededed',
-        'dark-text-secondary': '#a0a0a0',
+        'dark-text': '#ffffff',
+        'dark-text-secondary': '#ffffff',
       },
       fontFamily: {
         primary: ['var(--font-geist-sans)'],

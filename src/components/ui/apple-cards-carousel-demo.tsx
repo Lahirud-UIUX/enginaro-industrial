@@ -3,10 +3,13 @@
 import React from "react";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => (
-    <Card key={card.src} card={card} index={index} />
+    <Link href="/services" key={card.src}>
+      <Card card={card} index={index} />
+    </Link>
   ));
 
   return (
