@@ -51,6 +51,43 @@ const NavigationBar = () => {
     };
   }, [scrolled]);
 
+  // Don't render anything until mounted to prevent hydration mismatch
+  if (!mounted) {
+    return (
+      <div className="px-[20px] w-full">
+        <nav 
+          className="mx-auto h-20 rounded-[100px] bg-black/90 dark:bg-dark-surface/90 flex items-center justify-between px-4 fixed top-8 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300"
+          style={{ width: '100%' }}
+        >
+          {/* Logo */}
+          <div className="w-[160px] h-12 mx-4 flex items-center justify-center">
+            <div className="w-[150px] h-[46px] relative">
+              <Image 
+                src="/images/logo-new_white.png"
+                alt="Enginaro Industrial Logo" 
+                fill 
+                style={{ objectFit: 'contain' }}
+                priority
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = '/Logo.png';
+                }}
+              />
+            </div>
+          </div>
+          
+          {/* Mobile Menu Button */}
+          <button 
+            className="text-white p-2 z-50"
+            onClick={toggleMenu}
+          >
+            <Menu size={24} strokeWidth={1.5} />
+          </button>
+        </nav>
+      </div>
+    );
+  }
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     // Prevent scrolling when menu is open
@@ -69,7 +106,7 @@ const NavigationBar = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
           style={{ width: navWidth }}
-          className={`mx-auto h-20 rounded-[100px] ${scrolled || !mounted ? 'bg-black dark:bg-dark-surface shadow-lg' : 'bg-black/90 dark:bg-dark-surface/90'} flex items-center justify-between px-4 fixed top-8 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300`}
+          className={`mx-auto h-20 rounded-[100px] ${scrolled ? 'bg-black dark:bg-dark-surface shadow-lg' : 'bg-black/90 dark:bg-dark-surface/90'} flex items-center justify-between px-4 fixed top-8 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300`}
         >
           {/* Logo */}
           <motion.div 
