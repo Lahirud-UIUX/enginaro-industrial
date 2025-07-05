@@ -63,13 +63,13 @@ const projects = [
 // Categories for filtering
 const categories = [
   'All',
-  'Design & Engineering',
-  'Manufacturing & Fabrication',
-  'Prototype Manufacturing',
-  'Structural Engineering',
-  'Websites & Mobile apps',
-  'Consulting',
-  'Innovation'
+  'Product Design & Simulation',
+  'Precision Manufacturing & Fabrication',
+  'Prototype Development',
+  'Structural & Civil Engineering',
+  'Digital Platforms & Applications',
+  'Engineering Consulting & Feasibility',
+  'R&D and Innovation'
 ];
 
 const ProjectsPage = () => {
