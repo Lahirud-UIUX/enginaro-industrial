@@ -5,19 +5,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { ArrowUpRight, Code, Gauge, Lightbulb, Search, Settings, Zap } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import Footer from '@/components/Footer';
 
 // Sample project data
 const projects = [
   {
     id: 1,
-    title: 'Industrial Automation System',
-    category: 'Automation',
-    description: 'A complete automation solution for manufacturing facilities that increases efficiency and reduces operational costs.',
+    title: 'Student Competition Robot Design',
+    category: 'Design & Engineering',
+    description: 'To design a modular, durable, and easy-to-assemble robot prototype for a Japanese robotics teacher. Themodel serves as a training tool and testing platform for student competitions and classroom demonstrations.',
     image: '/images/who-we-are.png',
-    year: '2024',
-    icon: Settings
+    year: '2025'
   },
   {
     id: 2,
@@ -25,8 +24,7 @@ const projects = [
     category: 'Design & Engineering',
     description: 'Custom-designed measurement tool for the aerospace industry that ensures accuracy to within 0.001mm.',
     image: '/images/who-we-are.png',
-    year: '2024',
-    icon: Gauge
+    year: '2024'
   },
   {
     id: 3,
@@ -34,8 +32,7 @@ const projects = [
     category: 'Smart Systems',
     description: 'An IoT-based monitoring system for industrial equipment that provides real-time data and predictive maintenance alerts.',
     image: '/images/who-we-are.png',
-    year: '2024',
-    icon: Zap
+    year: '2024'
   },
   {
     id: 4,
@@ -43,8 +40,7 @@ const projects = [
     category: 'Software',
     description: 'Advanced control software for industrial robotics that improves precision and adaptability in manufacturing processes.',
     image: '/images/who-we-are.png',
-    year: '2024',
-    icon: Code
+    year: '2024'
   },
   {
     id: 5,
@@ -52,8 +48,7 @@ const projects = [
     category: 'Consulting',
     description: 'Comprehensive energy efficiency audit for a large manufacturing plant, resulting in 30% reduction in energy consumption.',
     image: '/images/who-we-are.png',
-    year: '2023',
-    icon: Search
+    year: '2023'
   },
   {
     id: 6,
@@ -61,18 +56,18 @@ const projects = [
     category: 'Innovation',
     description: 'A collaborative workshop that generated 15 viable product concepts for a leading industrial equipment manufacturer.',
     image: '/images/who-we-are.png',
-    year: '2023',
-    icon: Lightbulb
+    year: '2023'
   }
 ];
 
 // Categories for filtering
 const categories = [
   'All',
-  'Automation',
   'Design & Engineering',
-  'Smart Systems',
-  'Software',
+  'Manufacturing & Fabrication',
+  'Prototype Manufacturing',
+  'Structural Engineering',
+  'Websites & Mobile apps',
   'Consulting',
   'Innovation'
 ];
@@ -281,7 +276,6 @@ interface Project {
   description: string;
   image: string;
   year: string;
-  icon: React.ElementType;
 }
 
 const ProjectCard = ({ 
@@ -302,8 +296,6 @@ const ProjectCard = ({
     threshold: 0.1,
   });
 
-  const Icon = project.icon;
-  
   return (
     <div className="p-5 -m-5 mb-12" style={{ overflow: 'visible' }}>
       <motion.div
@@ -360,27 +352,15 @@ const ProjectCard = ({
         
         {/* Content */}
         <div className="p-6 flex flex-col flex-grow">
-          <div className="flex items-start gap-4 mb-4">
-            <motion.div 
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.3 + (0.1 * index) }}
-              viewport={{ once: true }}
-              className="w-10 h-10 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center flex-shrink-0"
-            >
-              <Icon size={20} className="text-primary" />
-            </motion.div>
-            
-            <motion.h3 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.2 + (0.1 * index) }}
-              viewport={{ once: true }}
-              className="text-xl font-bold text-black dark:text-white font-primary"
-            >
-              {project.title}
-            </motion.h3>
-          </div>
+          <motion.h3 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.4, delay: 0.2 + (0.1 * index) }}
+            viewport={{ once: true }}
+            className="text-xl font-bold text-black dark:text-white font-primary mb-4"
+          >
+            {project.title}
+          </motion.h3>
           
           <motion.p 
             initial={{ opacity: 0 }}

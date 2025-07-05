@@ -151,26 +151,6 @@ const AboutPage = () => {
                   <p className="text-[#3D3D3D] dark:text-white text-lg font-secondary mb-6">
                     We combine technical expertise with project consultation to offer complete support from concept development to prototype realization and final delivery. Our approach integrates design, engineering, simulation, and client collaboration, ensuring each project meets cost, quality, and time expectations.
                   </p>
-                  
-                  {/* Software icons and tools */}
-                  <div className="mt-8">
-                    <h3 className="text-xl font-bold text-black dark:text-white font-primary mb-4">Tools We Use</h3>
-                    <div className="flex flex-wrap gap-3">
-                      {['SolidWorks', 'AutoCAD', 'Fusion 360', 'ANSYS', 'Abaqus', 'IoT'].map((tool, index) => (
-                        <motion.div
-                          key={tool}
-                          initial={{ opacity: 0, scale: 0.9 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{ duration: 0.3, delay: 0.1 * index }}
-                          viewport={{ once: true }}
-                          whileHover={{ y: -5, boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)" }}
-                          className="px-4 py-2 bg-white dark:bg-[#3D3D3D] rounded-full text-black dark:text-white text-sm font-medium"
-                        >
-                          {tool}
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
                 </motion.div>
                 
                 {/* Decorative elements */}

@@ -175,13 +175,13 @@ const Footer = () => {
                   <motion.div variants={fadeInUp} className="flex gap-2 items-center">
                     <Mail className="text-white w-6 h-6 flex-shrink-0" />
                     <a href="mailto:enginaroindustrialsolutions@gmail.com" className="text-white text-sm hover:text-gray-300 transition-colors">
-                      enginaroindustrialsolutions@gmail.com
+                      contact@enginaro.com
                     </a>
                   </motion.div>
                   <motion.div variants={fadeInUp} className="flex gap-2 items-center">
                     <Phone className="text-white w-6 h-6 flex-shrink-0" />
                     <a href="tel:+94077000000" className="text-white text-sm hover:text-gray-300 transition-colors">
-                      +94 077 7377 736
+                      +94 77 172 1434
                     </a>
                   </motion.div>
                 </motion.div>
