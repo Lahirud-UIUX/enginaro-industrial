@@ -39,6 +39,7 @@ export default function RootLayout({
     <html lang="en" className="dark:bg-[#000000]">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased relative bg-background dark:bg-[#000000]`}
+        suppressHydrationWarning={true}
       >
         <NavigationBar />
         <main>
