@@ -27,8 +27,8 @@ const serviceCategories = [
     color: 'from-blue-500 to-cyan-400',
     overview: 'Our mechanical engineering team delivers high-precision design, analysis, and development services for a wide range of industries. From concept sketches to detailed 3D models and performance-tested simulations, we bring your mechanical systems to life.',
     coreServices: [
-      '2D & 3D CAD modeling (SolidWorks, Inventor, AutoCAD)',
-      'Finite Element Analysis (ANSYS, Abaqus)',
+      '2D & 3D CAD modeling',
+      'Finite Element Analysis',
       'Motion and thermal analysis',
       'Mechanism design & kinematic simulation',
       'Sheet metal and mechanical component design'

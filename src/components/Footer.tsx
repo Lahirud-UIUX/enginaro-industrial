@@ -46,9 +46,7 @@ const Footer = () => {
                   />
                 </motion.div>
               </div>
-              <p className="text-white text-sm mb-6">
-                Engineering solutions that turn ideas into real-world innovations — from smart design to reliable manufacturing.
-              </p>
+              <p className="text-white text-sm mb-6">Where Engineering Meets Excellence</p>
               <motion.div variants={staggerContainer} initial="hidden" animate="visible" className="flex gap-2">
                 <motion.a 
                   href="https://facebook.com" 
