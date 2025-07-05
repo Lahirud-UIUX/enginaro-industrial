@@ -376,30 +376,7 @@ const ServicesPage = () => {
                         </ul>
                       </div>
                       
-                      <div>
-                        <h3 className="text-xl font-bold text-black dark:text-white font-primary mb-4">
-                          {category.id === 'manufacturing' ? 'Facilities & Tools:' : 
-                           category.id === 'computer' ? 'Technologies Used:' : 
-                           category.id === 'electrical' ? 'Tools Used:' : 
-                           category.id === 'civil' ? 'Tools & Platforms:' : 
-                           category.id === 'mechanical' ? 'Tools & Platforms:' : 'Technologies Used:'}
-                        </h3>
-                        <div className="flex flex-wrap gap-3">
-                          {category.tools?.map((tool, idx) => (
-                            <motion.div
-                              key={tool}
-                              initial={{ opacity: 0, scale: 0.9 }}
-                              whileInView={{ opacity: 1, scale: 1 }}
-                              transition={{ duration: 0.3, delay: 0.1 * idx }}
-                              viewport={{ once: true }}
-                              whileHover={{ y: -5, boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)" }}
-                              className="px-4 py-2 bg-[#F5F5F5] dark:bg-[#3D3D3D] rounded-full text-black dark:text-white text-sm font-medium"
-                            >
-                              {tool}
-                            </motion.div>
-                          ))}
-                        </div>
-                      </div>
+
                     </div>
                   ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
