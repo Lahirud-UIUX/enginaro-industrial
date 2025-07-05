@@ -354,7 +354,7 @@ export const Card = ({
         <div className="rounded-[32px] p-[32px] overflow-hidden flex flex-col w-[384px] h-[640px] 
                       items-start justify-start relative z-10 max-lg:w-[288px] max-lg:h-[456px] select-none">
           <div className="relative z-40 flex flex-col gap-[16px] select-none">
-            <p className="text-[#efefef] text-[36px] font-bold leading-[44px] max-w-xs text-left
+            <p className="text-[#efefef] text-[28px] md:text-[36px] font-bold leading-[36px] md:leading-[44px] max-w-xs text-left
                          [text-wrap:balance] font-sans mt-2 h-[88px] flex items-start select-none whitespace-pre-line">
               {card.title}
             </p>

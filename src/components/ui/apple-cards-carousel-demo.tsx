@@ -65,7 +65,7 @@ const data = [
   },
   {
     category: "Services",
-    title: "Prototyping &\n3D Printing",
+    title: "Prototyping\n& 3D Printing",
     description: "We quickly build working models using precise 3D printing and prototyping tools.",
     src: "https://images.unsplash.com/photo-1722532476187-70120c1dca4c?q=80&w=1984&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     content: <DummyContent />,
