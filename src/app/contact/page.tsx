@@ -94,6 +94,7 @@ const ContactPage = () => {
 
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
+    console.log('Form submitted');
     e.preventDefault();
     
     // Validate form

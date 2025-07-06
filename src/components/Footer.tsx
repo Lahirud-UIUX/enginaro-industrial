@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { 
   FacebookIcon, 
-  InstagramIcon, 
+  YoutubeIcon, 
   LinkedinIcon, 
   Mail, 
   MapPin, 
@@ -49,7 +49,7 @@ const Footer = () => {
               <p className="text-white text-sm mb-6">Where Engineering Meets Excellence</p>
               <motion.div variants={staggerContainer} initial="hidden" animate="visible" className="flex gap-2">
                 <motion.a 
-                  href="https://facebook.com" 
+                  href="https://www.facebook.com/share/19NKrUc6i5/?mibextid=wwXIfr" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   variants={fadeInUp} 
@@ -59,17 +59,17 @@ const Footer = () => {
                   <FacebookIcon className="text-[#3D15B8] dark:text-primary w-5 h-5" />
                 </motion.a>
                 <motion.a 
-                  href="https://instagram.com" 
+                  href="https://youtube.com/@enginaro?si=HsQXMjvs4l830Q2L" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   variants={fadeInUp} 
                   whileHover={{ scale: 1.1, y: -5 }} 
                   className="w-12 h-12 bg-white dark:bg-[#1B1B1B] rounded-full flex items-center justify-center"
                 >
-                  <InstagramIcon className="text-[#3D15B8] dark:text-primary w-5 h-5" />
+                  <YoutubeIcon className="text-[#3D15B8] dark:text-primary w-5 h-5" />
                 </motion.a>
                 <motion.a 
-                  href="https://twitter.com" 
+                  href="https://x.com/enginaroIS" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   variants={fadeInUp} 
@@ -79,7 +79,7 @@ const Footer = () => {
                   <TwitterIcon className="text-[#3D15B8] dark:text-primary w-5 h-5" />
                 </motion.a>
                 <motion.a 
-                  href="https://linkedin.com" 
+                  href="https://www.linkedin.com/company/enginaro-industrial-solutions/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   variants={fadeInUp} 

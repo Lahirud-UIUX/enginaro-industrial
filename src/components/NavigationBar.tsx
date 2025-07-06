@@ -70,21 +70,23 @@ const NavigationBar = () => {
           style={{ width: '100%' }}
         >
           {/* Logo */}
-          <div className="w-[160px] h-12 mx-4 flex items-center justify-center">
-            <div className="w-[150px] h-[46px] relative">
-              <Image 
-                src="/images/logo-new_white.png"
-                alt="Enginaro Industrial Logo" 
-                fill 
-                style={{ objectFit: 'contain' }}
-                priority
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = '/Logo.png';
-                }}
-              />
+          <Link href="/" className="block">
+            <div className="w-[160px] h-12 mx-4 flex items-center justify-center cursor-pointer">
+              <div className="w-[150px] h-[46px] relative">
+                <Image 
+                  src="/images/logo-new_white.png"
+                  alt="Enginaro Industrial Logo" 
+                  fill 
+                  style={{ objectFit: 'contain' }}
+                  priority
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = '/Logo.png';
+                  }}
+                />
+              </div>
             </div>
-          </div>
+          </Link>
           
           {/* Mobile Menu Button */}
           <button 
@@ -109,26 +111,28 @@ const NavigationBar = () => {
           className={`mx-auto h-20 rounded-[100px] ${scrolled ? 'bg-black dark:bg-dark-surface shadow-lg' : 'bg-black/90 dark:bg-dark-surface/90'} flex items-center justify-between px-4 fixed top-8 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300`}
         >
           {/* Logo */}
-          <motion.div 
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            className={`${isMobile ? 'w-[160px]' : 'w-[207px]'} h-12 mx-4 flex items-center justify-center`}
-          >
-            <div className={`${isMobile ? 'w-[150px]' : 'w-[201px]'} h-[46px] relative`}>
-              <Image 
-                src="/images/logo-new_white.png"
-                alt="Enginaro Industrial Logo" 
-                fill 
-                style={{ objectFit: 'contain' }}
-                priority
-                onError={(e) => {
-                  // Fallback to the public directory if the import fails
-                  const target = e.target as HTMLImageElement;
-                  target.src = '/Logo.png';
-                }}
-              />
-            </div>
-          </motion.div>
+          <Link href="/" className="block">
+            <motion.div 
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              className={`${isMobile ? 'w-[160px]' : 'w-[207px]'} h-12 mx-4 flex items-center justify-center cursor-pointer`}
+            >
+              <div className={`${isMobile ? 'w-[150px]' : 'w-[201px]'} h-[46px] relative`}>
+                <Image 
+                  src="/images/logo-new_white.png"
+                  alt="Enginaro Industrial Logo" 
+                  fill 
+                  style={{ objectFit: 'contain' }}
+                  priority
+                  onError={(e) => {
+                    // Fallback to the public directory if the import fails
+                    const target = e.target as HTMLImageElement;
+                    target.src = '/Logo.png';
+                  }}
+                />
+              </div>
+            </motion.div>
+          </Link>
 
           {/* Navigation Links - Desktop */}
           <div className={`${!isMobile ? 'flex' : 'hidden'} items-center justify-center flex-1 mx-4`}>

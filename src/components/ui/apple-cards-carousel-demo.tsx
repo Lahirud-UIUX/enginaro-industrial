@@ -53,14 +53,14 @@ const data = [
     category: "Services",
     title: "Engineering\nDesign",
     description: "We create smart, practical designs for mechanical, electrical, and electronic systems.",
-    src: "https://images.unsplash.com/photo-1739283546829-ddf2f51256c5?q=80&w=2205&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/images/engineering-design.jpg",
     content: <DummyContent />,
   },
   {
     category: "Services",
     title: "Simulation &\nRendering",
     description: "We test and refine your designs with stress, motion, and thermal simulations.",
-    src: "https://images.unsplash.com/photo-1706137967021-7b25c7225f80?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/images/simulation-and-rendering.jpg",
     content: <DummyContent />,
   },
   {
@@ -72,9 +72,9 @@ const data = [
   },
   {
     category: "Services",
-    title: "CNC\nMachining",
-    description: "We offer CNC programming and machining for accurate part production.",
-    src: "https://images.unsplash.com/photo-1602223114290-ba6de2938acc?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Structural\nEngineering",
+    description: "We design safe, stable structures with concrete, steel, and foundation systems.",
+    src: "https://images.unsplash.com/photo-1663096695324-b7f53cf4f754?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     content: <DummyContent />,
   },
   {

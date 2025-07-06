@@ -6,6 +6,59 @@
   --primary: #ff6301;
   --font-primary: var(--font-geist-sans);
   --font-secondary: var(--font-inter);
+  
+  /* Card and surface colors */
+  --card-background: #ffffff;
+  --card-foreground: #171717;
+  
+  /* Border colors */
+  --border: #e5e7eb;
+  --border-light: #f3f4f6;
+  
+  /* Input colors */
+  --input-background: #ffffff;
+  --input-border: #d1d5db;
+  --input-focus: #3b82f6;
+  
+  /* Button colors */
+  --button-primary: #3b82f6;
+  --button-primary-hover: #2563eb;
+  --button-secondary: #6b7280;
+  --button-secondary-hover: #4b5563;
+  --button-danger: #ef4444;
+  --button-danger-hover: #dc2626;
+  --button-success: #10b981;
+  --button-success-hover: #059669;
+  --button-warning: #f59e0b;
+  --button-warning-hover: #d97706;
+  
+  /* Text colors */
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+  --text-light: #d1d5db;
+  --text-danger: #dc2626;
+  --text-success: #059669;
+  --text-warning: #d97706;
+  
+  /* Status colors */
+  --status-success-bg: #dcfce7;
+  --status-success-text: #166534;
+  --status-warning-bg: #fef3c7;
+  --status-warning-text: #92400e;
+  --status-danger-bg: #fee2e2;
+  --status-danger-text: #991b1b;
+  --status-info-bg: #dbeafe;
+  --status-info-text: #1e40af;
+  
+  /* Table colors */
+  --table-header-bg: #f9fafb;
+  --table-border: #e5e7eb;
+  --table-hover: #f9fafb;
+  
+  /* Loading and overlay colors */
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+  --loading-spinner: #3b82f6;
 }
 
 @theme inline {
@@ -14,12 +67,118 @@
   --color-primary: var(--primary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  /* Card colors */
+  --color-card-background: var(--card-background);
+  --color-card-foreground: var(--card-foreground);
+  
+  /* Border colors */
+  --color-border: var(--border);
+  --color-border-light: var(--border-light);
+  
+  /* Input colors */
+  --color-input-background: var(--input-background);
+  --color-input-border: var(--input-border);
+  --color-input-focus: var(--input-focus);
+  
+  /* Button colors */
+  --color-button-primary: var(--button-primary);
+  --color-button-primary-hover: var(--button-primary-hover);
+  --color-button-secondary: var(--button-secondary);
+  --color-button-secondary-hover: var(--button-secondary-hover);
+  --color-button-danger: var(--button-danger);
+  --color-button-danger-hover: var(--button-danger-hover);
+  --color-button-success: var(--button-success);
+  --color-button-success-hover: var(--button-success-hover);
+  --color-button-warning: var(--button-warning);
+  --color-button-warning-hover: var(--button-warning-hover);
+  
+  /* Text colors */
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-light: var(--text-light);
+  --color-text-danger: var(--text-danger);
+  --color-text-success: var(--text-success);
+  --color-text-warning: var(--text-warning);
+  
+  /* Status colors */
+  --color-status-success-bg: var(--status-success-bg);
+  --color-status-success-text: var(--status-success-text);
+  --color-status-warning-bg: var(--status-warning-bg);
+  --color-status-warning-text: var(--status-warning-text);
+  --color-status-danger-bg: var(--status-danger-bg);
+  --color-status-danger-text: var(--status-danger-text);
+  --color-status-info-bg: var(--status-info-bg);
+  --color-status-info-text: var(--status-info-text);
+  
+  /* Table colors */
+  --color-table-header-bg: var(--table-header-bg);
+  --color-table-border: var(--table-border);
+  --color-table-hover: var(--table-hover);
+  
+  /* Loading and overlay colors */
+  --color-overlay-bg: var(--overlay-bg);
+  --color-loading-spinner: var(--loading-spinner);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #000000;
     --foreground: #ffffff;
+    
+    /* Card and surface colors */
+    --card-background: #111827;
+    --card-foreground: #f9fafb;
+    
+    /* Border colors */
+    --border: #374151;
+    --border-light: #4b5563;
+    
+    /* Input colors */
+    --input-background: #1f2937;
+    --input-border: #4b5563;
+    --input-focus: #3b82f6;
+    
+    /* Button colors stay the same for consistency */
+    --button-primary: #3b82f6;
+    --button-primary-hover: #2563eb;
+    --button-secondary: #6b7280;
+    --button-secondary-hover: #4b5563;
+    --button-danger: #ef4444;
+    --button-danger-hover: #dc2626;
+    --button-success: #10b981;
+    --button-success-hover: #059669;
+    --button-warning: #f59e0b;
+    --button-warning-hover: #d97706;
+    
+    /* Text colors */
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --text-muted: #9ca3af;
+    --text-light: #6b7280;
+    --text-danger: #f87171;
+    --text-success: #34d399;
+    --text-warning: #fbbf24;
+    
+    /* Status colors for dark mode */
+    --status-success-bg: #064e3b;
+    --status-success-text: #6ee7b7;
+    --status-warning-bg: #78350f;
+    --status-warning-text: #fcd34d;
+    --status-danger-bg: #7f1d1d;
+    --status-danger-text: #fca5a5;
+    --status-info-bg: #1e3a8a;
+    --status-info-text: #93c5fd;
+    
+    /* Table colors */
+    --table-header-bg: #1f2937;
+    --table-border: #374151;
+    --table-hover: #1f2937;
+    
+    /* Loading and overlay colors */
+    --overlay-bg: rgba(0, 0, 0, 0.75);
+    --loading-spinner: #3b82f6;
   }
 }
 

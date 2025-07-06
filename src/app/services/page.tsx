@@ -25,13 +25,13 @@ const serviceCategories = [
     icon: Cog,
     description: 'Innovative mechanical solutions for complex industrial challenges.',
     color: 'from-blue-500 to-cyan-400',
-    overview: 'Our mechanical engineering team delivers high-precision design, analysis, and development services for a wide range of industries. From concept sketches to detailed 3D models and performance-tested simulations, we bring your mechanical systems to life.',
+    overview: 'Our Mechanical Engineering team transforms ideas into durable, manufacturable, and high-performing products. We specialize in 3D modeling, system design, and simulation for everything from industrial machinery to human-centered devices.\n We also integrate biomechanics into our work  developing ergonomic components, assistive devices, and motion-adaptive systems for healthcare and wearable tech.',
     coreServices: [
-      '2D & 3D CAD modeling',
-      'Finite Element Analysis',
-      'Motion and thermal analysis',
-      'Mechanism design & kinematic simulation',
-      'Sheet metal and mechanical component design'
+      'Mechanical design and optimization',
+      'Product development and reverse engineering',
+      'Biomechanical system analysis and ergonomic design',
+      'Finite Element Analysis (FEA), thermal and dynamic simulations',
+      'DFM/DFA, tolerance stack-up, and technical calculations'
     ],
     tools: ['SolidWorks', 'Autodesk Inventor', 'AutoCAD', 'ANSYS', 'Abaqus'],
     services: [
@@ -55,17 +55,17 @@ const serviceCategories = [
   },
   {
     id: 'mechatronic',
-    title: 'Mechatronic Engineering',
+    title: 'Mechatronics & IoT Systems',
     icon: Cpu,
     description: 'Integrated solutions combining mechanical, electrical, and control systems.',
     color: 'from-purple-500 to-indigo-500',
-    overview: 'We combine mechanical design, electronic control, and intelligent programming to develop robust mechatronic systems. Our solutions are ideal for smart devices, automated machinery, and sensor-driven technologies.',
+    overview: 'We bring machines to life with smart control, automation, and connectivity. Our Mechatronics & IoT team designs sensor-based systems, embedded devices, and real-time control interfaces across industries from smart factories to wearable tech. We also work in biomechatronics, designing intelligent systems that interact with the human body, such as motion sensors, rehab wearables, and health monitoring tools.',
     coreServices: [
-      'Embedded system development',
-      'Control system design and tuning',
-      'Sensor integration and automation',
-      'PCB layout and embedded firmware',
-      'Electro-mechanical prototyping'
+      'Sensor-integrated smart systems',
+      'Embedded electronics and control programming',
+      'Biomechatronic wearables and assistive tech',
+      'PCB and enclosure design', 
+      'IoT dashboards and automation platforms'
     ],
     tools: ['Arduino', 'Raspberry Pi', 'ESP32', 'STM32', 'MATLAB/Simulink', 'Proteus'],
     services: [
@@ -89,17 +89,16 @@ const serviceCategories = [
   },
   {
     id: 'electrical',
-    title: 'Electrical Engineering',
+    title: 'Electrical & Electronic Engineering',
     icon: Zap,
     description: 'Comprehensive electrical solutions from power systems to control circuitry.',
     color: 'from-amber-500 to-yellow-400',
-    overview: 'From low-voltage systems to industrial electrical layouts, our electrical engineering services ensure safety, efficiency, and compliance. We design intelligent, scalable, and maintainable power and control systems.',
+    overview: 'We design and develop the core electrical and electronic systems that power modern devices and automation. From circuit design to embedded hardware, our team ensures functional, safe, and reliable system integration across a wide range of applications',
     coreServices: [
-      'Electrical wiring and schematic design',
-      'Power distribution panel layouts',
-      'Motor control systems (VFDs, contactors, relays)',
-      'Lighting and building electrical systems',
-      'Electrical safety analysis & load calculations'
+      'Circuit simulation and electronic system design',
+      'Embedded hardware development',
+      'PCB layout and prototyping',
+      'Electrical layouts and industrial control systems',
     ],
     tools: ['AutoCAD Electrical', 'EPLAN', 'LTspice', 'Proteus', 'ETAP'],
     services: [
@@ -123,23 +122,22 @@ const serviceCategories = [
   },
   {
     id: 'civil',
-    title: 'Civil Engineering',
+    title: 'Civil & Structural Engineering',
     icon: Building,
     description: 'Structural solutions and infrastructure design for industrial facilities.',
     color: 'from-green-500 to-emerald-400',
-    overview: "Our civil engineering division supports structural design, layout planning, and site development with a practical and regulatory-compliant approach. Whether it's foundation analysis or site utilities, we deliver reliable civil solutions.",
+    overview: "Enginaro provides complete solutions for infrastructure, buildings, and industrial structures. Our services include structural analysis, foundation design, and MEP coordination ensuring every project is safe, efficient, and compliant from the ground up.",
     coreServices: [
-      'Structural design and drafting',
-      'Reinforcement detailing',
-      'Quantity estimation and BOQs',
-      'Site planning and utility layout',
-      'Drainage and foundation engineering'
+      'Reinforced concrete and steel structure design',
+      'Geotechnical analysis and foundation engineering',
+      'BOQ, construction drawings, and detailing',
+      'HVAC, plumbing, fire safety, and electrical layout plans',
     ],
     tools: ['AutoCAD Civil 3D', 'Revit', 'STAAD.Pro', 'SketchUp'],
     services: [
       {
         title: 'Structural Engineering',
-        description: 'Design and analysis of industrial structures, foundations, and support systems.'
+        description: 'We design safe, stable structures with concrete, steel, and foundation systems.'
       },
       {
         title: 'Industrial Facility Planning',
@@ -157,17 +155,16 @@ const serviceCategories = [
   },
   {
     id: 'computer',
-    title: 'Computer Science Engineering',
+    title: 'Software & Digital Engineering',
     icon: Code,
     description: 'Software and digital solutions for industrial applications and data systems.',
     color: 'from-blue-600 to-indigo-600',
-    overview: 'We integrate modern software with hardware to create intelligent, connected systems. Our team offers software development, UI/UX interfaces, and backend integration for IoT and engineering platforms.',
+    overview: 'We build custom software tools that empower engineering systems and businesses alike. From responsive mobile apps to real-time monitoring platforms, we develop intuitive, scalable solutions tailored to your workflow or product ecosystem.',
     coreServices: [
-      'Embedded programming and IoT dashboards',
-      'Web & mobile interfaces for smart systems',
-      'Custom software for monitoring & control',
-      'Database integration and backend APIs',
-      'Data logging, visualization, and analytics'
+      'Web and mobile app development',
+      'IoT interfaces and engineering dashboards',
+      'Backend systems and API integration',
+      'Cross-platform software for real-time data handling',
     ],
     tools: ['Python', 'C/C++', 'Node.js', 'Firebase', 'MQTT', 'ThingSpeak', 'React'],
     services: [
@@ -191,17 +188,16 @@ const serviceCategories = [
   },
   {
     id: 'manufacturing',
-    title: 'Manufacturing and Assembly',
+    title: 'Manufacturing and Assembly Solutions',
     icon: Factory,
     description: 'End-to-end production services from prototype to small-batch manufacturing.',
     color: 'from-red-500 to-orange-400',
-    overview: 'From prototypes to precision manufacturing, we deliver reliable, cost-effective fabrication solutions. Our workshop includes CNC machines, 3D printers, and fabrication equipment to turn digital designs into functional products.',
+    overview: 'We take designs off the screen and into the real world. Our in-house capabilities in CNC machining, laser cutting, 3D printing, and precision assembly ensure that your components are built to spec and ready for action fast.',
     coreServices: [
-      'CNC machining (3-axis, 5-axis, lathe)',
-      'FDM-based 3D printing',
-      'Mechanical assembly and sub-assembly',
-      'Sheet metal fabrication and welding',
-      'G-code simulation and optimization'
+      'CNC machining, turning, and laser fabrication',
+      'FDM and resin 3D printing',
+      'Welding, sheet metal work, and finishing',
+      'Quality inspection, fitment, and functional assembly',
     ],
     tools: ['Fusion 360 CAM', 'Cura', 'Mach3', 'G-code simulators', 'MIG/TIG welding equipment'],
     services: [

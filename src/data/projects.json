@@ -1,0 +1,151 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "Student Competition Robot Design",
+      "category": "Product Design & Simulation",
+      "description": "To design a modular, durable, and easy-to-assemble robot prototype for a Japanese robotics teacher. The model serves as a training tool and testing platform for student competitions and classroom demonstrations.",
+      "year": "2025",
+      "image": "/images/who-we-are.png",
+      "status": "published",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2025-07-06T16:58:23.996Z",
+      "images": [
+        "/images/who-we-are.png"
+      ],
+      "client": "Robotics Instructor (Japan)",
+      "industry": "Robotics Education / Student Competitions",
+      "objective": "To design a modular, durable, and easy-to-assemble robot prototype for a Japanese robotics teacher. The model serves as a training tool and testing platform for student competitions and classroom demonstrations.",
+      "engineeringInsight": " This project demonstrates Enginaro's commitment to education-focused engineering. The robot is now used\n by a Japanese robotics teacher to challenge and educate students through modular, hands-on design\n thinking.",
+      "scopeOfWork": [
+        "Mechanical design and layout using SolidWorks",
+        "Chassis design for obstacle navigation and load-bearing",
+        "Track system and motor placement optimization",
+        "Provision for modular arm or tool attachment",
+        "Exporting CAD models for student access and test assembly"
+      ],
+      "challenges": [
+        "Designing for modularity to allow tool changes",
+        "Ensuring stability and durability during student handling",
+        "Optimizing gear ratios and chain drive placement",
+        "Balancing cost-efficiency with classroom scalability"
+      ],
+      "deliverables": [
+        "Fully modeled robot chassis and drive system",
+        "SolidWorks source files for reuse in classroom settings",
+        "Documentation for student assembly and part functions",
+        "Images and animated walkthrough for virtual classroom use"
+      ],
+      "tags": [
+        "Robotics",
+        "Education",
+        "SolidWorks",
+        "Mechanical Design",
+        "Prototyping",
+        "Modular Design"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "CLoth Packing Machine",
+      "category": "Product Design & Simulation",
+      "description": "Design a high-throughput automated system for folded clothing units using a conveyor lift, alignment guides, and collection bins.",
+      "year": "2025",
+      "image": "/images/uploads/1751821304960_Logo-01.jpg",
+      "status": "published",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2025-07-06T17:01:47.820Z",
+      "images": [
+        "/images/uploads/1751821296949_slide__1_.jpg",
+        "/images/uploads/1751821299131_slide__2_.jpg",
+        "/images/uploads/1751821301164_slide__3_.jpg"
+      ],
+      "client": "Textile Automation Partner (Denmark)",
+      "industry": "garment Manufacturing & Packaging",
+      "objective": "Develop a custom precision measurement tool for aerospace components that ensures accuracy to within 0.001mm for critical aircraft parts inspection.",
+      "engineeringInsight": "Achieving sub-micron precision required careful consideration of thermal expansion, material selection, and measurement methodology. We implemented advanced calibration algorithms and temperature compensation systems, while designing the tool geometry to minimize deflection under measurement loads. The solution demonstrates how precision engineering principles can be applied to create tools that exceed industry standards.",
+      "scopeOfWork": [
+        "Requirements analysis and specification development",
+        "Precision engineering design using CAD software",
+        "Material selection for dimensional stability",
+        "Calibration system development",
+        "Quality assurance testing protocols"
+      ],
+      "challenges": [
+        "Achieving sub-micron precision consistently",
+        "Maintaining accuracy across temperature variations",
+        "Ensuring tool durability under repeated use",
+        "Meeting strict aerospace certification requirements"
+      ],
+      "deliverables": [
+        "Custom precision measurement tool",
+        "Calibration and maintenance procedures",
+        "Quality certification documentation",
+        "User training materials and protocols"
+      ],
+      "tags": [
+        "Precision Engineering",
+        "Aerospace",
+        "Quality Control",
+        "CAD Design",
+        "Measurement Tools"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "IoT Monitoring System",
+      "category": "Smart Systems",
+      "description": "An IoT-based monitoring system for industrial equipment that provides real-time data and predictive maintenance alerts.",
+      "year": "2024",
+      "image": "/images/who-we-are.png",
+      "status": "published",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z",
+      "images": [
+        "/images/who-we-are.png",
+        "/images/slide (1).jpg"
+      ],
+      "client": "Industrial Manufacturing Plant",
+      "industry": "Manufacturing & IoT",
+      "objective": "Design and implement an IoT-based monitoring system for industrial equipment that provides real-time data analytics and predictive maintenance capabilities.",
+      "engineeringInsight": "The engineering complexity lay in creating a robust system that could operate reliably in harsh industrial environments while processing vast amounts of sensor data in real-time. We developed edge computing algorithms to reduce latency and implemented machine learning models that adapt to equipment behavior patterns. The distributed architecture ensures system resilience and scalability across diverse manufacturing environments.",
+      "scopeOfWork": [
+        "System architecture design and planning",
+        "Sensor selection and placement optimization",
+        "Data collection and transmission protocols",
+        "Cloud-based analytics dashboard development",
+        "Predictive maintenance algorithm implementation"
+      ],
+      "challenges": [
+        "Ensuring reliable data transmission in industrial environments",
+        "Developing accurate predictive maintenance algorithms",
+        "Integrating with existing legacy systems",
+        "Maintaining system security and data privacy"
+      ],
+      "deliverables": [
+        "Complete IoT monitoring system",
+        "Real-time analytics dashboard",
+        "Predictive maintenance software",
+        "System documentation and training materials"
+      ],
+      "tags": [
+        "IoT",
+        "Industrial Automation",
+        "Predictive Maintenance",
+        "Data Analytics",
+        "Smart Systems"
+      ]
+    }
+  ],
+  "categories": [
+    "Biomedical & Biomechanical Engineering",
+    "Digital Platforms & Applications",
+    "Engineering Consulting & Feasibility",
+    "Precision Manufacturing & Fabrication",
+    "Product Design & Simulation",
+    "Prototype Development",
+    "R&D and Innovation",
+    "Structural & Civil Engineering"
+  ],
+  "lastUpdated": "2025-07-06T17:01:47.820Z"
+}

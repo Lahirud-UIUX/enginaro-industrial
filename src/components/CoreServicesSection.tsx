@@ -9,7 +9,7 @@ const CoreServicesSection = () => {
   return (
     <SectionAnimation 
       animation="fadeInUp" 
-      className="w-full max-w-[1300px] mx-auto py-16 relative overflow-visible"
+      className="w-full max-w-[1300px] mx-auto py-16 px-4 md:px-6 relative overflow-visible"
       id="services"
     >
       <div className="flex flex-col">
