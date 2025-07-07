@@ -53,7 +53,7 @@ const data = [
     category: "Services",
     title: "Engineering\nDesign",
     description: "We create smart, practical designs for mechanical, electrical, and electronic systems.",
-    src: "/images/engineering-design.jpg",
+    src: "/images/IMG_7117 1.jpg",
     content: <DummyContent />,
   },
   {

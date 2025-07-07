@@ -4,12 +4,12 @@
       "id": "1",
       "title": "Student Competition Robot Design",
       "category": "Product Design & Simulation",
-      "description": "To design a modular, durable, and easy-to-assemble robot prototype for a Japanese robotics teacher. The model serves as a training tool and testing platform for student competitions and classroom demonstrations.",
+      "description": "To design a modular, durable, and easy-to-assemble robot prototype for a Japanese robotics teacher. ",
       "year": "2025",
       "image": "/images/who-we-are.png",
       "status": "published",
       "createdAt": "2024-01-01T00:00:00Z",
-      "updatedAt": "2025-07-06T16:58:23.996Z",
+      "updatedAt": "2025-07-07T19:08:32.050Z",
       "images": [
         "/images/who-we-are.png"
       ],
@@ -46,94 +46,529 @@
       ]
     },
     {
-      "id": "2",
-      "title": "CLoth Packing Machine",
-      "category": "Product Design & Simulation",
-      "description": "Design a high-throughput automated system for folded clothing units using a conveyor lift, alignment guides, and collection bins.",
-      "year": "2025",
-      "image": "/images/uploads/1751821304960_Logo-01.jpg",
-      "status": "published",
-      "createdAt": "2024-01-01T00:00:00Z",
-      "updatedAt": "2025-07-06T17:01:47.820Z",
-      "images": [
-        "/images/uploads/1751821296949_slide__1_.jpg",
-        "/images/uploads/1751821299131_slide__2_.jpg",
-        "/images/uploads/1751821301164_slide__3_.jpg"
-      ],
-      "client": "Textile Automation Partner (Denmark)",
-      "industry": "garment Manufacturing & Packaging",
-      "objective": "Develop a custom precision measurement tool for aerospace components that ensures accuracy to within 0.001mm for critical aircraft parts inspection.",
-      "engineeringInsight": "Achieving sub-micron precision required careful consideration of thermal expansion, material selection, and measurement methodology. We implemented advanced calibration algorithms and temperature compensation systems, while designing the tool geometry to minimize deflection under measurement loads. The solution demonstrates how precision engineering principles can be applied to create tools that exceed industry standards.",
-      "scopeOfWork": [
-        "Requirements analysis and specification development",
-        "Precision engineering design using CAD software",
-        "Material selection for dimensional stability",
-        "Calibration system development",
-        "Quality assurance testing protocols"
-      ],
-      "challenges": [
-        "Achieving sub-micron precision consistently",
-        "Maintaining accuracy across temperature variations",
-        "Ensuring tool durability under repeated use",
-        "Meeting strict aerospace certification requirements"
-      ],
-      "deliverables": [
-        "Custom precision measurement tool",
-        "Calibration and maintenance procedures",
-        "Quality certification documentation",
-        "User training materials and protocols"
-      ],
-      "tags": [
-        "Precision Engineering",
-        "Aerospace",
-        "Quality Control",
-        "CAD Design",
-        "Measurement Tools"
-      ]
-    },
-    {
-      "id": "3",
-      "title": "IoT Monitoring System",
-      "category": "Smart Systems",
-      "description": "An IoT-based monitoring system for industrial equipment that provides real-time data and predictive maintenance alerts.",
+      "id": "1751915247805twdeinbqd",
+      "title": "Autonomous Drone for Image-Guided Navigation",
+      "category": "R&D and Innovation",
+      "description": " Design and develop a fully functional drone capable of autonomous flight using onboard image\n processing systems.",
       "year": "2024",
       "image": "/images/who-we-are.png",
       "status": "published",
-      "createdAt": "2024-01-01T00:00:00Z",
-      "updatedAt": "2024-01-01T00:00:00Z",
+      "createdAt": "2025-07-07T19:07:27.805Z",
+      "updatedAt": "2025-07-07T20:02:36.458Z",
       "images": [
-        "/images/who-we-are.png",
-        "/images/slide (1).jpg"
+        "/images/who-we-are.png"
       ],
-      "client": "Industrial Manufacturing Plant",
-      "industry": "Manufacturing & IoT",
-      "objective": "Design and implement an IoT-based monitoring system for industrial equipment that provides real-time data analytics and predictive maintenance capabilities.",
-      "engineeringInsight": "The engineering complexity lay in creating a robust system that could operate reliably in harsh industrial environments while processing vast amounts of sensor data in real-time. We developed edge computing algorithms to reduce latency and implemented machine learning models that adapt to equipment behavior patterns. The distributed architecture ensures system resilience and scalability across diverse manufacturing environments.",
+      "client": "Private Technology Client - Sri Lanka",
+      "industry": " Aerospace / Robotics / Image Processing",
+      "objective": "Design and develop a fully functional drone capable of autonomous flight using onboard image\n processing systems",
+      "engineeringInsight": "The drone is optimized for visual tracking and autonomous navigation. It features a robust frame\n structure, custom-designed to accommodate modular sensor mounts and lightweight electronics,\n ensuring responsive image-based control",
       "scopeOfWork": [
-        "System architecture design and planning",
-        "Sensor selection and placement optimization",
-        "Data collection and transmission protocols",
-        "Cloud-based analytics dashboard development",
-        "Predictive maintenance algorithm implementation"
+        "Structural drone design for balanced flight",
+        "Electronic integration for autonomous operation",
+        "Test flight planning and sensor feedback tuning"
       ],
       "challenges": [
-        "Ensuring reliable data transmission in industrial environments",
-        "Developing accurate predictive maintenance algorithms",
-        "Integrating with existing legacy systems",
-        "Maintaining system security and data privacy"
+        "Achieving stable flight without remote input.",
+        "Integrating a camera module with onboard processing.",
+        "Reducing frame weight while maintaining rigidity."
       ],
       "deliverables": [
-        "Complete IoT monitoring system",
-        "Real-time analytics dashboard",
-        "Predictive maintenance software",
-        "System documentation and training materials"
+        "Complete 3D CAD model",
+        "Electronics layout and circuit integration",
+        "Functional test flight video and report"
+      ],
+      "tags": []
+    },
+    {
+      "id": "1751915534236g4126dxri",
+      "title": "Electric Bicycle Design with PLC Integration",
+      "category": "Product Design & Simulation",
+      "description": "Design and develop an electric bicycle integrating a mechanical structure with programmable control\n for efficient personal transportation.",
+      "year": "2025",
+      "image": "/images/who-we-are.png",
+      "status": "published",
+      "createdAt": "2025-07-07T19:12:14.236Z",
+      "updatedAt": "2025-07-07T19:12:14.236Z",
+      "images": [
+        "/images/who-we-are.png"
+      ],
+      "client": "Private Client - USA",
+      "industry": " Green Mobility / Transportation Engineering",
+      "objective": "Design and develop an electric bicycle integrating a mechanical structure with programmable control\n for efficient personal transportation.",
+      "engineeringInsight": "This project emphasizes sustainable transport with customizable control. It features modular\n construction for serviceability, and PLC-driven logic for adaptive motor control based on the road\n conditions and rider input",
+      "scopeOfWork": [
+        "Complete mechanical design of frame, transmission, and seating",
+        "Integration of a PLC-based control system for speed and battery monitoring",
+        "CAD assembly, electrical layout, and performance planning"
+      ],
+      "challenges": [
+        "Designing a lightweight yet durable frame",
+        "Integrating PLC in compact geometry",
+        "Ensuring battery management with minimal electronic noise"
+      ],
+      "deliverables": [
+        "Full 3D CAD assembly and production drawings",
+        "PLC program logic for the control system",
+        "System prototype ready for urban testing"
+      ],
+      "tags": []
+    },
+    {
+      "id": "1751915701700u79nbr7i0",
+      "title": " Sensor Enclosure Design for Solar Application",
+      "category": "Product Design & Simulation",
+      "description": "Design a thermally stable sensor enclosure for solar-powered systems suitable for mass production.",
+      "year": "2024",
+      "image": "/images/who-we-are.png",
+      "status": "published",
+      "createdAt": "2025-07-07T19:15:01.700Z",
+      "updatedAt": "2025-07-07T19:50:51.065Z",
+      "images": [
+        "/images/who-we-are.png"
+      ],
+      "client": " Renewable Energy Manufacturer - USA",
+      "industry": " Solar Energy / Renewable Technology",
+      "objective": "Design a thermally stable sensor enclosure for solar-powered systems suitable for mass production.",
+      "engineeringInsight": "The enclosure integrates dual flow channels to allow heat escape while protecting sensor stability.\n Compact geometry and optimized vent placement allow real-time environmental exposure with\n reliable data acquisition",
+      "scopeOfWork": [
+        "Develop a 3D model for the solar sensor enclosure",
+        "Perform thermal simulations for heat regulation",
+        "Engineer internal supports and sealing mechanisms",
+        "Ensure manufacturability and outdoor durability"
+      ],
+      "challenges": [
+        "Designing for continuous heat exposure under direct sunlight",
+        "Achieving precision internal fit for sensor hardware",
+        "Maintaining sealing performance in plastic housing for IP-rated conditions"
+      ],
+      "deliverables": [
+        "Complete CAD design (3D + technical drawings)",
+        "Thermal simulation report",
+        "Manufacturing-ready files for injection molding"
+      ],
+      "tags": []
+    },
+    {
+      "id": "1751915959923oeh3y2jw4",
+      "title": "Heat Exchanger Design & Thermal Simulation",
+      "category": "Product Design & Simulation",
+      "description": "To design a pressure-rated heat exchanger system and validate its mechanical integrity using FEA.\nSimulation focused on stress, displacement, and thermal effects under real operating conditions.\n",
+      "year": "2025",
+      "image": "/images/who-we-are.png",
+      "status": "published",
+      "createdAt": "2025-07-07T19:19:19.923Z",
+      "updatedAt": "2025-07-07T19:19:19.923Z",
+      "images": [
+        "/images/who-we-are.png"
+      ],
+      "client": "Process Engineering Firm (Germany)",
+      "industry": "Thermal Systems / Pressure Vessels",
+      "objective": "To design a pressure-rated heat exchanger system and validate its mechanical integrity using FEA.\nSimulation focused on stress, displacement, and thermal effects under real operating conditions.\n",
+      "engineeringInsight": "This simulation demonstrated Enginaro’s ability to combine detailed CAD design with structural simulation\nto ensure the real-world viability and certification readiness of pressure-handling components.",
+      "scopeOfWork": [
+        "3D design of cylindrical shell and bolted flanged connections",
+        "Setup of boundary conditions and internal pressure loading",
+        "Static structural analysis for stress and displacement",
+        "Color-map plotting of deformation zones and safety factors",
+        "Compliance with European pressure vessel directives"
+      ],
+      "challenges": [
+        "Handling multi-axial load distribution across the shell/flange geometry",
+        "Ensuring safe deformation limits under variable pressures",
+        "Validating bolted joint behavior at flange connections",
+        "Maintaining weight and manufacturability for client standards"
+      ],
+      "deliverables": [
+        "Final CAD model of heat exchanger with assembly drawings",
+        "Simulation results with annotated color plots",
+        "Report with safety factors and design compliance summary",
+        "STL file exports and PDF documentation"
+      ],
+      "tags": []
+    },
+    {
+      "id": "1751916174459wqhfplckw",
+      "title": "Vision-Based Inspection Conveyor System",
+      "category": "R&D and Innovation",
+      "description": "To design a fully automated inspection conveyor system integrated with industrial vision cameras.\nThe system provides real-time visual quality control during inline processing.",
+      "year": "2025",
+      "image": "/images/who-we-are.png",
+      "status": "published",
+      "createdAt": "2025-07-07T19:22:54.459Z",
+      "updatedAt": "2025-07-07T19:22:54.459Z",
+      "images": [
+        "/images/who-we-are.png"
+      ],
+      "client": "Industrial Automation Client (USA)",
+      "industry": "Electronics / Product Inspection",
+      "objective": "To design a fully automated inspection conveyor system integrated with industrial vision cameras.\nThe system provides real-time visual quality control during inline processing.",
+      "engineeringInsight": "This project showcases Enginaro’s strength in combining mechanical automation with smart sensing.\nA complete solution for in-line visual inspection with seamless mechanical and vision coordination.",
+      "scopeOfWork": [
+        "Design of modular conveyor platform with camera mounting support",
+        "Integration of enclosure with adjustable lighting for image accuracy",
+        "Setup for automated product handling and rejection mechanism",
+        "Coordination with vision system software (VisionX)",
+        "Vibration-free, adjustable frame design for camera alignment"
+      ],
+      "challenges": [
+        "Isolating camera mounts from conveyor vibration",
+        "Providing controlled lighting in transparent enclosure",
+        "Designing for both hardware and vision alignment precision",
+        "Enabling easy access for cleaning and camera calibration"
+      ],
+      "deliverables": [
+        "CAD assembly with detailed vision module integration",
+        "Drawings for enclosure, mountings, and the automation system",
+        "Camera bracket and cable routing plan",
+        "Client-ready visualization renders and manufacturing pack"
+      ],
+      "tags": []
+    },
+    {
+      "id": "1751916456772c554vrjne",
+      "title": "Game Asset Design: Stylized Boat and Environment",
+      "category": "Product Design & Simulation",
+      "description": "To design a visually distinct boat model for a strategy-based mobile game set on a river map.\nDesign supports custom textures, modular extensions, and game physics for dynamic interaction.",
+      "year": "2024",
+      "image": "/images/who-we-are.png",
+      "status": "published",
+      "createdAt": "2025-07-07T19:27:36.772Z",
+      "updatedAt": "2025-07-07T19:50:57.341Z",
+      "images": [
+        "/images/who-we-are.png"
+      ],
+      "client": "Indie Game Studio (USA)",
+      "industry": "Game Development / 3D Modeling for Games",
+      "objective": "To design a visually distinct boat model for a strategy-based mobile game set on a river map.\nDesign supports custom textures, modular extensions, and game physics for dynamic interaction.",
+      "engineeringInsight": "This project highlights Enginaro’s ability to support creative industries through engineering-quality modeling\ntailored for performance, aesthetic consistency, and interactive storytelling.",
+      "scopeOfWork": [
+        "Modeling low-poly boat assets optimized for Unity/Unreal Engine",
+        "Design variations for multiple ship types (attack, trade, scout)",
+        "Design of environmental props including boatyard and river segments",
+        "Lighting and rendering for stylized visuals",
+        "Asset packaging for game engine integration"
+      ],
+      "challenges": [
+        "Clean silhouette readability for mobile screen sizes",
+        "Low-poly count (<2k tris) for real-time performance",
+        "Color-coded parts for gameplay identification (e.g., sails, turrets)",
+        "Modular asset system for building river levels and docking areas"
+      ],
+      "deliverables": [
+        "3D model files (FBX/OBJ)",
+        "Basic textures and AO map",
+        "Environment prototypes (boatyard, dock, terrain)"
       ],
       "tags": [
-        "IoT",
-        "Industrial Automation",
-        "Predictive Maintenance",
-        "Data Analytics",
-        "Smart Systems"
+        "GameDesign",
+        "LowPoly",
+        "BoatAssets",
+        "3DModeling",
+        "IndieGames"
+      ]
+    },
+    {
+      "id": "1751916662966lm2t07zht",
+      "title": "Server Rack Enclosure Design (Sheet Metal)",
+      "category": "Product Design & Simulation",
+      "description": "To design a custom server rack enclosure optimized for airflow, durability, and modular electronics integration.\nThe goal was to meet the client’s mechanical, thermal, and serviceability standards for high-density server rooms.",
+      "year": "2025",
+      "image": "/images/who-we-are.png",
+      "status": "published",
+      "createdAt": "2025-07-07T19:31:02.966Z",
+      "updatedAt": "2025-07-07T19:31:02.966Z",
+      "images": [
+        "/images/who-we-are.png"
+      ],
+      "client": "Data Infrastructure Provider (USA)",
+      "industry": "IT Infrastructure / Data Centers / Industrial Networking",
+      "objective": "To design a custom server rack enclosure optimized for airflow, durability, and modular electronics integration.\nThe goal was to meet the client’s mechanical, thermal, and serviceability standards for high-density server rooms.",
+      "engineeringInsight": "\nThis project demonstrated Enginaro’s ability to deliver precision-driven sheet metal products tailored to global tech infrastructure. The server enclosure featured high-performance ventilation, durability, and modular customization for next-gen server deployments.\n",
+      "scopeOfWork": [
+        "Complete 3D design of enclosure and frame structure using parametric modeling",
+        "Modular design with multiple door types (perforated, solid) and quick-release latches",
+        "Sheet metal bending, hole patterns for ventilation, and mounting rails for server hardware",
+        "Assembly constraints for cable management and cooling duct integration",
+        "Designed for easy production via laser cutting and CNC bending"
+      ],
+      "challenges": [
+        "Balancing structural rigidity with cooling airflow",
+        "Designing punch-ready ventilation patterns while maintaining panel strength",
+        "Optimizing hinge placement and door clearance",
+        "Meeting IT safety standards and rack compatibility specs"
+      ],
+      "deliverables": [
+        "3D CAD model and fabrication drawings",
+        "DXF profiles for laser cutting",
+        "3D rendered visualizations for client approval",
+        "Detailed assembly instructions and BOM"
+      ],
+      "tags": [
+        "SheetMetalDesign",
+        "ServerRack",
+        "DataCenter",
+        "LaserCutting",
+        "Fabrication"
+      ]
+    },
+    {
+      "id": "1751916916728xknsvh73p",
+      "title": " Electric Trimmer: Design, Electronics & Prototyping",
+      "category": "Prototype Development",
+      "description": "To design a fully functional electric trimmer from scratch, covering mechanical layout, blade mechanics, PCB integration, and final prototyping.\n",
+      "year": "2025",
+      "image": "/images/who-we-are.png",
+      "status": "published",
+      "createdAt": "2025-07-07T19:35:16.728Z",
+      "updatedAt": "2025-07-07T19:35:16.728Z",
+      "images": [
+        "/images/who-we-are.png"
+      ],
+      "client": "Personal Care Product Brand (Confidential)",
+      "industry": "Consumer Electronics / Grooming Devices",
+      "objective": "To design a fully functional electric trimmer from scratch, covering mechanical layout, blade mechanics, PCB integration, and final prototyping.\n",
+      "engineeringInsight": "This project showcased Enginaro’s ability to combine precision mechanical design with custom electronics integration, delivering an innovative and manufacturable grooming device prototype.\n",
+      "scopeOfWork": [
+        "3D mechanical design of outer casing and internal layout",
+        "Gear system and blade actuation mechanism with safety spacing",
+        "Design and integration of battery, DC motor, and PCB",
+        "Charging port layout and toggle switch design",
+        "DFM support for injection molding",
+        "Final prototype assembly and testing"
+      ],
+      "challenges": [
+        "Miniaturization of components to fit ergonomic casing",
+        "Vibration control and user comfort during operation",
+        "Material choice for blade alignment and casing durability",
+        "Tight integration of electronics within a compact shell"
+      ],
+      "deliverables": [
+        "3D CAD files with exploded and assembled views",
+        "PCB Gerber files and electrical schematics",
+        "Fully functional physical prototype trimmer delivered to the client",
+        "Documentation for manufacturing and electronics sourcing"
+      ],
+      "tags": [
+        "TrimmerDesign",
+        "ConsumerElectronics",
+        "Prototyping",
+        "ProductDevelopment",
+        "PCBDesign"
+      ]
+    },
+    {
+      "id": "1751917135201ahmwe7z1g",
+      "title": " Smart Coffee Maker: Full Internal Design",
+      "category": "Product Design & Simulation",
+      "description": "To design a compact dual-cup coffee brewing machine, covering mechanical structure, internal water pathways, heat management, and interface design.",
+      "year": "2025",
+      "image": "/images/who-we-are.png",
+      "status": "published",
+      "createdAt": "2025-07-07T19:38:55.201Z",
+      "updatedAt": "2025-07-07T19:38:55.201Z",
+      "images": [
+        "/images/who-we-are.png"
+      ],
+      "client": "Consumer Appliance Startup (Confidential)",
+      "industry": "Smart Home / Kitchen Appliances",
+      "objective": "To design a compact dual-cup coffee brewing machine, covering mechanical structure, internal water pathways, heat management, and interface design.\n",
+      "engineeringInsight": "This project highlights Enginaro’s capability in appliance design, combining functionality, form, and manufacturability for consumer kitchen products.\n",
+      "scopeOfWork": [
+        "Complete CAD design using Fusion 360 for housing and internals",
+        "Modular cartridge system for water inlet, brewing chamber, and drip trays",
+        "Heat coil integration, pump chamber layout, and nozzle outlet path",
+        "Ergonomic interface zone with digital controls and LED indicators",
+        "Design for injection molding with separate shell sections"
+      ],
+      "challenges": [
+        "Designing compact pathways for water flow and pressure build-up",
+        "Ensuring internal component access for assembly and maintenance",
+        "Steam management and housing insulation placement",
+        "Fitting a dual-cup layout within a minimal countertop footprint"
+      ],
+      "deliverables": [
+        "Fully detailed 3D model with all internal components",
+        "Exploded views and manufacturing reference",
+        "Bill of Materials (BOM) and technical documentation"
+      ],
+      "tags": [
+        "CoffeeMachineDesign",
+        "ConsumerProductDesign",
+        "ApplianceDesign",
+        "SmartKitchen"
+      ]
+    },
+    {
+      "id": "1751917356812ogt0tcwcv",
+      "title": "Folding Hand Fan Mold Design & Fabrication",
+      "category": "Precision Manufacturing & Fabrication",
+      "description": "To design and manufacture a high-precision steel mold for a traditional folding hand fan, suitable for mass production using injection molding techniques.",
+      "year": "2023",
+      "image": "/images/who-we-are.png",
+      "status": "published",
+      "createdAt": "2025-07-07T19:42:36.812Z",
+      "updatedAt": "2025-07-07T19:51:11.905Z",
+      "images": [
+        "/images/who-we-are.png"
+      ],
+      "client": "Consumer Product Manufacturer (India)",
+      "industry": "Plastic Product Manufacturing / Tooling",
+      "objective": "To design and manufacture a high-precision steel mold for a traditional folding hand fan, suitable for mass production using injection molding techniques.\n",
+      "engineeringInsight": "This project reflects Enginaro’s manufacturing expertise in mold design, highlighting precision, finish quality, and functional aesthetics, tailored to high-volume production tooling.",
+      "scopeOfWork": [
+        "Complete CAD modeling of the fan mold cavity and core using SolidWorks",
+        "Designing airflow-consistent rib patterns and surface detailing",
+        "CNC-compatible CAM path planning and electrode clearance considerations",
+        "Mold base, ejection system, and runner layout design",
+        "Manufacturing using CNC milling and finishing techniques"
+      ],
+      "challenges": [
+        "Achieving uniform fine rib spacing with high surface fidelity",
+        "Toolpath optimization to maintain symmetry and reduce machining marks",
+        "Accurate split-line placement to avoid flash during molding",
+        "Incorporating venting slots without compromising aesthetic detailing"
+      ],
+      "deliverables": [
+        "Final mold assembly including base plate, cavity-core, guide pins",
+        "Machined mold block with polishing-ready finish",
+        "CAM setup sheets and machining strategy documentation",
+        "Prototype test results and mold maintenance guide"
+      ],
+      "tags": [
+        "MoldDesign",
+        "InjectionMolding",
+        "CNCManufacturing",
+        "ToolingSolutions"
+      ]
+    },
+    {
+      "id": "1751917523751eztv0sfwf",
+      "title": "PET Bottle Blow Mold Design & Fabrication",
+      "category": "Precision Manufacturing & Fabrication",
+      "description": "To develop a precision-machined mold for PET bottle blow molding, ensuring accurate volume formation, neck finish, and durability under repetitive production cycles.\n",
+      "year": "2024",
+      "image": "/images/who-we-are.png",
+      "status": "published",
+      "createdAt": "2025-07-07T19:45:23.751Z",
+      "updatedAt": "2025-07-07T19:51:03.857Z",
+      "images": [
+        "/images/who-we-are.png"
+      ],
+      "client": "Beverage Packaging Supplier (Thailand)",
+      "industry": "Plastic Blow Molding / Packaging",
+      "objective": "To develop a precision-machined mold for PET bottle blow molding, ensuring accurate volume formation, neck finish, and durability under repetitive production cycles.\n",
+      "engineeringInsight": "\nThis project showcases Enginaro’s expertise in precision mold making, where detailed form, manufacturing discipline, and part lifecycle are tightly engineered to meet industrial-scale packaging demands.",
+      "scopeOfWork": [
+        "3D modeling of bottle profile and mold cavity using SolidWorks",
+        "Mold core and cavity separation with undercut-free parting design",
+        "Neck thread and base structure formation based on the client bottle sample",
+        "CNC machining of hardened steel mold with fine surface finish",
+        "Assembly alignment and vent hole integration for air evacuation"
+      ],
+      "challenges": [
+        "Maintaining high fidelity of neck threading for cap compatibility",
+        "Managing blow expansion tolerances for consistent bottle shape",
+        "Ensuring mold durability under high-cycle conditions",
+        "Avoiding flow marks or flashing during high-pressure air injection"
+      ],
+      "deliverables": [
+        "Fully machined mold set (core and cavity) with polished internal geometry",
+        "CNC operation sheets and machining strategies",
+        "Trial-tested PET bottle samples for dimension validation",
+        "Maintenance guide for long-term tool use"
+      ],
+      "tags": [
+        "PETMoldDesign",
+        "BlowMolding",
+        "CNCManufacturing",
+        "PackagingSolutions"
+      ]
+    },
+    {
+      "id": "1751917663216ihkbj35ay",
+      "title": " L-Joint Mold Design & Fabrication",
+      "category": "Precision Manufacturing & Fabrication",
+      "description": "To develop a robust injection mold for producing L-shaped pipe joints, ensuring tight dimensional tolerances and a smooth internal flow path for industrial use.\n",
+      "year": "2025",
+      "image": "/images/who-we-are.png",
+      "status": "published",
+      "createdAt": "2025-07-07T19:47:43.216Z",
+      "updatedAt": "2025-07-07T19:47:43.216Z",
+      "images": [
+        "/images/who-we-are.png"
+      ],
+      "client": "Industrial Fitting Manufacturer (Sri Lanka)",
+      "industry": "Plastic Injection Molding / Plumbing Components",
+      "objective": "To develop a robust injection mold for producing L-shaped pipe joints, ensuring tight dimensional tolerances and a smooth internal flow path for industrial use.\n",
+      "engineeringInsight": "This project reinforces Enginaro’s competence in manufacturing injection tooling for complex pipe fittings, where internal consistency and mechanical precision are mission-critical.",
+      "scopeOfWork": [
+        "3D modeling of the L-joint profile with precise flow channel geometry",
+        "Core–cavity mold design with multi-part ejection clearance",
+        "Design optimization to avoid part warping and air traps",
+        "CNC machining of hardened tool steel with mirror-finish cavity zones",
+        "Fitting the trial sample and dimensional inspection"
+      ],
+      "challenges": [
+        "Ensuring concentric alignment of pipe ends during part ejection",
+        "Minimizing shrinkage defects in thick-walled elbow zones",
+        "Designing robust cooling channel paths for fast cycle time",
+        "Preventing flash formation around the tight radius section"
+      ],
+      "deliverables": [
+        "Fully finished mold set ready for injection molding",
+        "Technical drawings and CNC operation strategy",
+        "Mold maintenance and troubleshooting guide",
+        "First sample L-joint validation with customer-provided gauges"
+      ],
+      "tags": [
+        "InjectionMoldDesign",
+        "PlasticPipeFittings",
+        "CNCManufacturing",
+        "Toolmaking"
+      ]
+    },
+    {
+      "id": "1751917818944l1tgl7wtn",
+      "title": "Yoghurt Spoon Mold Design & Manufacturing",
+      "category": "Precision Manufacturing & Fabrication",
+      "description": "To design and manufacture a multi-cavity injection mold for producing lightweight, single-use yoghurt spoons with a smooth surface finish and consistent shape.\n",
+      "year": "2025",
+      "image": "/images/who-we-are.png",
+      "status": "published",
+      "createdAt": "2025-07-07T19:50:18.944Z",
+      "updatedAt": "2025-07-07T19:50:18.944Z",
+      "images": [
+        "/images/who-we-are.png"
+      ],
+      "client": "Dairy Product Supplier (Sri Lanka)",
+      "industry": "Food Packaging / Plastic Injection Molding",
+      "objective": "To design and manufacture a multi-cavity injection mold for producing lightweight, single-use yoghurt spoons with a smooth surface finish and consistent shape.\n",
+      "engineeringInsight": "This project exemplifies Enginaro’s precision moldmaking expertise in food-grade plastic products, highlighting efficient tooling layout and high-volume manufacturing readiness.",
+      "scopeOfWork": [
+        "Precise 3D modeling of ergonomic spoon geometry",
+        "Mold layout for 4-cavity symmetrical configuration",
+        "Gating system design with central runner and optimized flow balance",
+        "Mirror-finish cavity machining to eliminate post-processing",
+        "Trial molding with sample validation"
+      ],
+      "challenges": [
+        "Maintaining uniform fill in all four cavities",
+        "Achieving smooth spoon surfaces without post-polishing",
+        "Avoiding short shots in narrow handle zones",
+        "Designing for quick cooling and ejection cycles"
+      ],
+      "deliverables": [
+        "Ready-to-use 4-cavity mold plate",
+        "Technical drawings and CAM programming files",
+        "Prototype plastic spoons for QA testing",
+        "Maintenance guidelines for long mold life"
+      ],
+      "tags": [
+        "InjectionMolding",
+        "PlasticSpoonMold",
+        "FoodPackaging",
+        "CNCManufacturing",
+        "MoldDesign"
       ]
     }
   ],
@@ -147,5 +582,5 @@
     "R&D and Innovation",
     "Structural & Civil Engineering"
   ],
-  "lastUpdated": "2025-07-06T19:00:14.177Z"
+  "lastUpdated": "2025-07-07T20:02:36.458Z"
 }

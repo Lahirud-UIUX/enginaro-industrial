@@ -127,11 +127,11 @@ const ProjectsPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch"
             style={{ overflow: 'visible', paddingBottom: '40px' }}
           >
             {filteredProjects.map((project, index) => (
-              <Link href={`/projects/${project.id}`} key={project.id} className="block" style={{ overflow: 'visible' }}>
+              <Link href={`/projects/${project.id}`} key={project.id} className="block h-full" style={{ overflow: 'visible' }}>
                 <ProjectCard 
                   project={project}
                   index={index}
@@ -280,14 +280,14 @@ const ProjectCard = ({
           damping: 25,
           duration: 0.3
         }}
-        className="bg-white dark:bg-[#1B1B1B] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
+        className="bg-white dark:bg-[#1B1B1B] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 h-full flex flex-col"
         style={{ 
           transformStyle: 'preserve-3d',
           transform: isHovered ? 'translateZ(20px)' : 'translateZ(0px)'
         }}
       >
         {/* Image */}
-        <div className="relative h-48 overflow-hidden">
+        <div className="relative h-48 overflow-hidden flex-shrink-0">
           <Image 
             src={project.image} 
             alt={project.title}
@@ -298,7 +298,7 @@ const ProjectCard = ({
         </div>
         
         {/* Content */}
-        <div className="p-6">
+        <div className="p-6 flex flex-col flex-grow">
           <div className="flex items-center justify-between mb-3">
             <span className="text-sm text-primary font-secondary font-medium bg-primary/10 px-3 py-1 rounded-full">
               {project.category}
@@ -312,11 +312,11 @@ const ProjectCard = ({
             {project.title}
           </h3>
           
-          <p className="text-[#3D3D3D] dark:text-white font-secondary text-sm mb-4 line-clamp-3">
+          <p className="text-[#3D3D3D] dark:text-white font-secondary text-sm mb-4 line-clamp-3 flex-grow">
             {project.description}
           </p>
           
-          <div className="flex items-center text-primary font-secondary font-medium group-hover:translate-x-2 transition-transform duration-300">
+          <div className="flex items-center text-primary font-secondary font-medium group-hover:translate-x-2 transition-transform duration-300 mt-auto">
             <span className="mr-2">View Details</span>
             <ArrowUpRight size={16} />
           </div>

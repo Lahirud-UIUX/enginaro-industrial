@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import WhoWeAreImage from '@/images/who-we-are.png';
 import { Wrench, Zap, ArrowUpRight } from 'lucide-react';
 import SectionAnimation from './ui/SectionAnimation';
@@ -74,23 +75,25 @@ const AboutSection = () => {
                 simulation, prototyping, & fabrication.
               </motion.p>
               
-              <motion.button 
-                initial={{ opacity: 0, y: 20 }}
-                animate={contentInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-primary text-white rounded-full py-3 px-6 flex items-center 
-                          justify-center w-fit gap-2 hover:bg-opacity-90 transition-all font-secondary mt-auto"
-              >
-                <span>Learn more about us</span>
-                <motion.div
-                  animate={{ x: [0, 5, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop", ease: "easeInOut" }}
+              <Link href="/about" className="w-fit">
+                <motion.button 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={contentInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-primary text-white rounded-full py-3 px-6 flex items-center 
+                            justify-center w-fit gap-2 hover:bg-opacity-90 transition-all font-secondary mt-auto"
                 >
-                  <ArrowUpRight size={20} strokeWidth={1.5} className="text-white" />
-                </motion.div>
-              </motion.button>
+                  <span>Learn more about us</span>
+                  <motion.div
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop", ease: "easeInOut" }}
+                  >
+                    <ArrowUpRight size={20} strokeWidth={1.5} className="text-white" />
+                  </motion.div>
+                </motion.button>
+              </Link>
             </div>
           </motion.div>
           
