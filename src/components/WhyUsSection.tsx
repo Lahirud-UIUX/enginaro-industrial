@@ -162,7 +162,7 @@ const WhyUsSection = () => {
             viewport={{ once: true }}
             className="text-[#3D3D3D] dark:text-white font-secondary"
           >
-            We're more than just engineers — we're your innovation partners. From idea to execution, 
+            We're more than just engineers, we're your innovation partners. From idea to execution, 
             we bring the tools, skills, and speed to help you succeed in today's fast-moving industrial world.
           </motion.p>
         </motion.div>

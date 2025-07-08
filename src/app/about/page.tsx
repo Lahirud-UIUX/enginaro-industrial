@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Wrench, Zap, ArrowUpRight, Users, Award, Lightbulb } from 'lucide-react';
@@ -61,17 +62,19 @@ const AboutPage = () => {
                 At Enginaro Industrial, we're dedicated to turning complex engineering challenges into practical, 
                 high-performance solutions that drive innovation and efficiency for our clients.
               </motion.p>
-              <motion.button
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.8 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-primary text-white rounded-full py-4 px-8 flex items-center justify-center w-fit gap-2 hover:bg-opacity-90 transition-all font-secondary"
+                className="w-fit"
               >
-                <span>Contact our team</span>
-                <ArrowUpRight size={20} strokeWidth={1.5} className="text-white" />
-              </motion.button>
+                <Link href="/contact" className="bg-primary text-white rounded-full py-4 px-8 flex items-center justify-center w-fit gap-2 hover:bg-opacity-90 transition-all font-secondary">
+                  <span>Contact our team</span>
+                  <ArrowUpRight size={20} strokeWidth={1.5} className="text-white" />
+                </Link>
+              </motion.div>
             </motion.div>
             
             {/* Image */}
@@ -130,11 +133,11 @@ const AboutPage = () => {
                   className="space-y-4"
                 >
                   <p className="text-[#3D3D3D] dark:text-white text-lg font-secondary">
-                    At Enginaro, we believe that every project is a partnership—we work as an extension of your team to understand your vision, align with your objectives, and engineer real-world solutions that last.
+                    At Enginaro, we believe that every project is a partnership, we work as an extension of your team to understand your vision, align with your objectives, and engineer real-world solutions that last.
                   </p>
                   
                   <p className="text-[#3D3D3D] dark:text-white text-lg font-secondary">
-                    Our team uses industry-standard and advanced software platforms such as SolidWorks, Inventor, AutoCAD, Fusion 360, ANSYS, and Abaqus to enhance accuracy, performance, and design quality. We also integrate IoT-based control systems to support smart, connected solutions across engineering applications.
+                    We combine technical expertise with project consultation to offer complete support from concept development to prototype realization and final delivery.
                   </p>
                 </motion.div>
               </div>
@@ -149,8 +152,66 @@ const AboutPage = () => {
                   className="p-8 bg-gray-50 dark:bg-[#292929] rounded-3xl relative z-10"
                 >
                   <p className="text-[#3D3D3D] dark:text-white text-lg font-secondary mb-6">
-                    We combine technical expertise with project consultation to offer complete support from concept development to prototype realization and final delivery. Our approach integrates design, engineering, simulation, and client collaboration, ensuring each project meets cost, quality, and time expectations.
+                    Our engineering processes are driven by advanced digital tools and simulation techniques that ensure precision, efficiency, and exceptional design quality across disciplines. We also integrate IoT-enabled control systems to deliver smart, connected solutions tailored for modern industrial and technological applications.
                   </p>
+                  
+                  {/* Key Features */}
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-bold text-black dark:text-white font-primary mb-4">Our Process</h3>
+                    <div className="space-y-3">
+                      <motion.div 
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.4, delay: 0.4 }}
+                        viewport={{ once: true }}
+                        className="flex items-center"
+                      >
+                        <div className="bg-primary text-white rounded-full h-6 w-6 flex items-center justify-center mr-3 flex-shrink-0">
+                          <span className="text-xs font-bold">1</span>
+                        </div>
+                        <span className="text-[#3D3D3D] dark:text-white font-secondary">Design & Engineering</span>
+                      </motion.div>
+                      
+                      <motion.div 
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.4, delay: 0.5 }}
+                        viewport={{ once: true }}
+                        className="flex items-center"
+                      >
+                        <div className="bg-primary text-white rounded-full h-6 w-6 flex items-center justify-center mr-3 flex-shrink-0">
+                          <span className="text-xs font-bold">2</span>
+                        </div>
+                        <span className="text-[#3D3D3D] dark:text-white font-secondary">Simulation & Analysis</span>
+                      </motion.div>
+                      
+                      <motion.div 
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.4, delay: 0.6 }}
+                        viewport={{ once: true }}
+                        className="flex items-center"
+                      >
+                        <div className="bg-primary text-white rounded-full h-6 w-6 flex items-center justify-center mr-3 flex-shrink-0">
+                          <span className="text-xs font-bold">3</span>
+                        </div>
+                        <span className="text-[#3D3D3D] dark:text-white font-secondary">Client Collaboration</span>
+                      </motion.div>
+                      
+                      <motion.div 
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.4, delay: 0.7 }}
+                        viewport={{ once: true }}
+                        className="flex items-center"
+                      >
+                        <div className="bg-primary text-white rounded-full h-6 w-6 flex items-center justify-center mr-3 flex-shrink-0">
+                          <span className="text-xs font-bold">4</span>
+                        </div>
+                        <span className="text-[#3D3D3D] dark:text-white font-secondary">Final Delivery</span>
+                      </motion.div>
+                    </div>
+                  </div>
                 </motion.div>
                 
                 {/* Decorative elements */}
@@ -191,7 +252,7 @@ const AboutPage = () => {
                   </p>
                   
                   <p className="text-[#3D3D3D] dark:text-white text-lg font-secondary">
-                    Today, Enginaro continues to grow—driven by talent, powered by experience, and inspired by challenges.
+                    Today, Enginaro continues to grow driven by talent, powered by experience, and inspired by challenges.
                   </p>
                   
                   {/* Timeline elements */}
@@ -295,7 +356,7 @@ const AboutPage = () => {
                   className="space-y-4"
                 >
                   <p className="text-[#3D3D3D] dark:text-white text-lg font-secondary">
-                    Enginaro (Pvt) Ltd was established in 2024 through a strategic merger of skilled professionals and small engineering teams with a shared passion for innovation and industrial problem-solving. The founding partners envisioned a company that would merge traditional engineering excellence with modern digital tools—creating a new standard in design, fabrication, and consulting.
+                    Enginaro (Pvt) Ltd was established in 2024 through a strategic merger of skilled professionals and small engineering teams with a shared passion for innovation and industrial problem-solving. The founding partners envisioned a company that would merge traditional engineering excellence with modern digital tools creating a new standard in design, fabrication, and consulting.
                   </p>
                   
                   <motion.div 
@@ -373,7 +434,8 @@ const AboutPage = () => {
           </div>
         </section>
         
-        {/* Our Team Section */}
+        {/* Our Team Section - HIDDEN (Uncomment to show in future) */}
+        {/*
         <section className="w-full max-w-[1300px] mx-auto py-16 px-4 md:px-6">
           <ScrollAnimatedSection>
             <div className="max-w-[800px] mx-auto text-center mb-16">
@@ -388,13 +450,13 @@ const AboutPage = () => {
             </div>
           </ScrollAnimatedSection>
           
-          {/* Team Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3,].map((member, index) => (
               <TeamMember key={index} index={index} />
             ))}
           </div>
         </section>
+        */}
         
         {/* CTA Section */}
         <ScrollAnimatedSection className="w-full max-w-[1300px] mx-auto py-16 px-4 md:px-6">
@@ -412,14 +474,16 @@ const AboutPage = () => {
               <p className="text-white text-lg font-secondary mb-8 opacity-90">
                 Get in touch with our team to discuss how we can help bring your engineering vision to life.
               </p>
-              <motion.button
+              <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-primary rounded-full py-4 px-8 flex items-center justify-center mx-auto gap-2 hover:bg-opacity-90 transition-all font-secondary"
+                className="mx-auto w-fit"
               >
-                <span>Contact us today</span>
-                <ArrowUpRight size={20} strokeWidth={1.5} className="text-primary" />
-              </motion.button>
+                <Link href="/contact" className="bg-white text-primary rounded-full py-4 px-8 flex items-center justify-center gap-2 hover:bg-opacity-90 transition-all font-secondary">
+                  <span>Contact us today</span>
+                  <ArrowUpRight size={20} strokeWidth={1.5} className="text-primary" />
+                </Link>
+              </motion.div>
             </motion.div>
             
             {/* Background Elements */}
@@ -509,6 +573,8 @@ const ValueCard = ({
   );
 };
 
+{/* TeamMember Component - HIDDEN (Related to Our Team section) */}
+{/*
 const TeamMember = ({ index }: { index: number }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -525,7 +591,6 @@ const TeamMember = ({ index }: { index: number }) => {
       whileHover={{ y: -10, transition: { duration: 0.3 } }}
     >
       <div className="h-[250px] relative bg-gray-200">
-        {/* Fallback colored background with role icon */}
         <div className="absolute inset-0 flex items-center justify-center bg-primary/10">
           <Users size={64} className="text-primary/50" />
         </div>
@@ -544,5 +609,6 @@ const TeamMember = ({ index }: { index: number }) => {
     </motion.div>
   );
 };
+*/}
 
 export default AboutPage; 

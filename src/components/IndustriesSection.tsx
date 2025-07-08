@@ -141,7 +141,7 @@ const IndustriesSection = () => {
           viewport={{ once: true }}
           className="text-[#3D3D3D] dark:text-white font-secondary mt-4"
         >
-          We work with a wide range of industries—delivering smart, practical, and scalable engineering solutions that fit real-world needs.
+          We work with a wide range of industries, delivering smart, practical, and scalable engineering solutions that fit real-world needs.
         </motion.p>
       </motion.div>
       

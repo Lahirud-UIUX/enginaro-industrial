@@ -135,7 +135,7 @@ const TestimonialsSection = () => {
             viewport={{ once: true }}
             className="text-[#3D3D3D] dark:text-white font-secondary"
           >
-            Don't just take our word for it — hear what our satisfied clients have to say about their experience working with Enginaro Industrial.
+            Don't just take our word for it, hear what our satisfied clients have to say about their experience working with Enginaro Industrial Solutions.
           </motion.p>
         </motion.div>
         

@@ -2,16 +2,16 @@
   "projects": [
     {
       "id": "1",
-      "title": "Student Competition Robot Design",
+      "title": "Student Competition Robot Design for Robotics Instructor",
       "category": "Product Design & Simulation",
-      "description": "To design a modular, durable, and easy-to-assemble robot prototype for a Japanese robotics teacher. ",
+      "description": "To design a modular, durable, and easy-to-assemble robot prototype for a Japanese robotics teacher. The model serves as a training tool and testing platform for student competitions and classroom demonstrations.",
       "year": "2025",
-      "image": "/images/who-we-are.png",
+      "image": "/images/uploads/1751997314444_Student_Competition_Robot_Design_1.jpg",
       "status": "published",
       "createdAt": "2024-01-01T00:00:00Z",
-      "updatedAt": "2025-07-07T19:08:32.050Z",
+      "updatedAt": "2025-07-08T18:11:55.347Z",
       "images": [
-        "/images/who-we-are.png"
+        "/images/uploads/1751997316501_Student_Competition_Robot_Design_1.jpg"
       ],
       "client": "Robotics Instructor (Japan)",
       "industry": "Robotics Education / Student Competitions",
@@ -51,16 +51,16 @@
       "category": "R&D and Innovation",
       "description": " Design and develop a fully functional drone capable of autonomous flight using onboard image\n processing systems.",
       "year": "2024",
-      "image": "/images/who-we-are.png",
+      "image": "/images/uploads/1751997830427_Autonomous.jpg",
       "status": "published",
       "createdAt": "2025-07-07T19:07:27.805Z",
-      "updatedAt": "2025-07-07T20:02:36.458Z",
+      "updatedAt": "2025-07-08T18:03:52.368Z",
       "images": [
-        "/images/who-we-are.png"
+        "/images/uploads/1751997831719_Autonomous.jpg"
       ],
       "client": "Private Technology Client - Sri Lanka",
       "industry": " Aerospace / Robotics / Image Processing",
-      "objective": "Design and develop a fully functional drone capable of autonomous flight using onboard image\n processing systems",
+      "objective": "Design and develop a fully functional drone capable of autonomous flight using onboard image processing systems",
       "engineeringInsight": "The drone is optimized for visual tracking and autonomous navigation. It features a robust frame\n structure, custom-designed to accommodate modular sensor mounts and lightweight electronics,\n ensuring responsive image-based control",
       "scopeOfWork": [
         "Structural drone design for balanced flight",
@@ -85,12 +85,12 @@
       "category": "Product Design & Simulation",
       "description": "Design and develop an electric bicycle integrating a mechanical structure with programmable control\n for efficient personal transportation.",
       "year": "2025",
-      "image": "/images/who-we-are.png",
+      "image": "/images/uploads/1751997372065_Electric_Bicycle_Design_with_PLC_Integration_1.jpg",
       "status": "published",
       "createdAt": "2025-07-07T19:12:14.236Z",
-      "updatedAt": "2025-07-07T19:12:14.236Z",
+      "updatedAt": "2025-07-08T17:56:28.153Z",
       "images": [
-        "/images/who-we-are.png"
+        "/images/uploads/1751997373831_Electric_Bicycle_Design_with_PLC_Integration_2.jpg"
       ],
       "client": "Private Client - USA",
       "industry": " Green Mobility / Transportation Engineering",
@@ -117,19 +117,21 @@
       "id": "1751915701700u79nbr7i0",
       "title": " Sensor Enclosure Design for Solar Application",
       "category": "Product Design & Simulation",
-      "description": "Design a thermally stable sensor enclosure for solar-powered systems suitable for mass production.",
+      "description": "Develop a robust and thermally stable sensor enclosure specifically engineered for solar-powered systems, ensuring compatibility with cost-effective, scalable mass production methods",
       "year": "2024",
-      "image": "/images/who-we-are.png",
+      "image": "/images/uploads/1751997403891_Sensor_Enclosure_Design_for_Solar_Application_1.jpg",
       "status": "published",
       "createdAt": "2025-07-07T19:15:01.700Z",
-      "updatedAt": "2025-07-07T19:50:51.065Z",
+      "updatedAt": "2025-07-08T18:13:16.162Z",
       "images": [
-        "/images/who-we-are.png"
+        "/images/uploads/1751997407350_Sensor_Enclosure_Design_for_Solar_Application_1.jpg",
+        "/images/uploads/1751997408436_Sensor_Enclosure_Design_for_Solar_Application_2.jpg",
+        "/images/uploads/1751997409603_Sensor_Enclosure_Design_for_Solar_Application_3.jpg"
       ],
       "client": " Renewable Energy Manufacturer - USA",
       "industry": " Solar Energy / Renewable Technology",
       "objective": "Design a thermally stable sensor enclosure for solar-powered systems suitable for mass production.",
-      "engineeringInsight": "The enclosure integrates dual flow channels to allow heat escape while protecting sensor stability.\n Compact geometry and optimized vent placement allow real-time environmental exposure with\n reliable data acquisition",
+      "engineeringInsight": "The enclosure integrates dual flow channels to allow heat escape while protecting sensor stability.\nCompact geometry and optimized vent placement allow real-time environmental exposure with reliable data acquisition",
       "scopeOfWork": [
         "Develop a 3D model for the solar sensor enclosure",
         "Perform thermal simulations for heat regulation",
@@ -154,12 +156,12 @@
       "category": "Product Design & Simulation",
       "description": "To design a pressure-rated heat exchanger system and validate its mechanical integrity using FEA.\nSimulation focused on stress, displacement, and thermal effects under real operating conditions.\n",
       "year": "2025",
-      "image": "/images/who-we-are.png",
+      "image": "/images/uploads/1751997437021_Heat_Exchanger_Design___Thermal_Simulation_1.jpg",
       "status": "published",
       "createdAt": "2025-07-07T19:19:19.923Z",
-      "updatedAt": "2025-07-07T19:19:19.923Z",
+      "updatedAt": "2025-07-08T17:57:21.180Z",
       "images": [
-        "/images/who-we-are.png"
+        "/images/uploads/1751997440359_Heat_Exchanger_Design___Thermal_Simulation_1.jpg"
       ],
       "client": "Process Engineering Firm (Germany)",
       "industry": "Thermal Systems / Pressure Vessels",
@@ -192,12 +194,12 @@
       "category": "R&D and Innovation",
       "description": "To design a fully automated inspection conveyor system integrated with industrial vision cameras.\nThe system provides real-time visual quality control during inline processing.",
       "year": "2025",
-      "image": "/images/who-we-are.png",
+      "image": "/images/uploads/1751997461215_Vision-Based_Inspection_Conveyor_System_1.jpg",
       "status": "published",
       "createdAt": "2025-07-07T19:22:54.459Z",
-      "updatedAt": "2025-07-07T19:22:54.459Z",
+      "updatedAt": "2025-07-08T17:57:44.892Z",
       "images": [
-        "/images/who-we-are.png"
+        "/images/uploads/1751997463256_Vision-Based_Inspection_Conveyor_System_1.jpg"
       ],
       "client": "Industrial Automation Client (USA)",
       "industry": "Electronics / Product Inspection",
@@ -230,12 +232,16 @@
       "category": "Product Design & Simulation",
       "description": "To design a visually distinct boat model for a strategy-based mobile game set on a river map.\nDesign supports custom textures, modular extensions, and game physics for dynamic interaction.",
       "year": "2024",
-      "image": "/images/who-we-are.png",
+      "image": "/images/uploads/1751997491281_Game_Asset_Design_Stylized_Boat_and_Environment_1.png",
       "status": "published",
       "createdAt": "2025-07-07T19:27:36.772Z",
-      "updatedAt": "2025-07-07T19:50:57.341Z",
+      "updatedAt": "2025-07-08T17:58:27.866Z",
       "images": [
-        "/images/who-we-are.png"
+        "/images/uploads/1751997493082_Game_Asset_Design_Stylized_Boat_and_Environment_1.png",
+        "/images/uploads/1751997497313_Game_Asset_Design_Stylized_Boat_and_Environment_2.png",
+        "/images/uploads/1751997498907_Game_Asset_Design_Stylized_Boat_and_Environment_3.png",
+        "/images/uploads/1751997501763_Game_Asset_Design_Stylized_Boat_and_Environment_4.jpg",
+        "/images/uploads/1751997503892_Game_Asset_Design_Stylized_Boat_and_Environment_5.jpg"
       ],
       "client": "Indie Game Studio (USA)",
       "industry": "Game Development / 3D Modeling for Games",
@@ -273,12 +279,14 @@
       "category": "Product Design & Simulation",
       "description": "To design a custom server rack enclosure optimized for airflow, durability, and modular electronics integration.\nThe goal was to meet the client’s mechanical, thermal, and serviceability standards for high-density server rooms.",
       "year": "2025",
-      "image": "/images/who-we-are.png",
+      "image": "/images/uploads/1751997527536_Server_Rack_Enclosure_Design__Sheet_Metal__1.jpg",
       "status": "published",
       "createdAt": "2025-07-07T19:31:02.966Z",
-      "updatedAt": "2025-07-07T19:31:02.966Z",
+      "updatedAt": "2025-07-08T17:58:54.514Z",
       "images": [
-        "/images/who-we-are.png"
+        "/images/uploads/1751997529017_Server_Rack_Enclosure_Design__Sheet_Metal__1.jpg",
+        "/images/uploads/1751997530747_Server_Rack_Enclosure_Design__Sheet_Metal__2.jpg",
+        "/images/uploads/1751997532573_Server_Rack_Enclosure_Design__Sheet_Metal__3.jpg"
       ],
       "client": "Data Infrastructure Provider (USA)",
       "industry": "IT Infrastructure / Data Centers / Industrial Networking",
@@ -317,12 +325,15 @@
       "category": "Prototype Development",
       "description": "To design a fully functional electric trimmer from scratch, covering mechanical layout, blade mechanics, PCB integration, and final prototyping.\n",
       "year": "2025",
-      "image": "/images/who-we-are.png",
+      "image": "/images/uploads/1751997561037_Electric_Trimmer_Design__Electronics___Prototyping_1.png",
       "status": "published",
       "createdAt": "2025-07-07T19:35:16.728Z",
-      "updatedAt": "2025-07-07T19:35:16.728Z",
+      "updatedAt": "2025-07-08T17:59:29.801Z",
       "images": [
-        "/images/who-we-are.png"
+        "/images/uploads/1751997563681_Electric_Trimmer_Design__Electronics___Prototyping_1.png",
+        "/images/uploads/1751997565207_Electric_Trimmer_Design__Electronics___Prototyping_2.jpg",
+        "/images/uploads/1751997566881_Electric_Trimmer_Design__Electronics___Prototyping_3.jfif",
+        "/images/uploads/1751997568381_Electric_Trimmer_Design__Electronics___Prototyping_4.jpg"
       ],
       "client": "Personal Care Product Brand (Confidential)",
       "industry": "Consumer Electronics / Grooming Devices",
@@ -362,12 +373,12 @@
       "category": "Product Design & Simulation",
       "description": "To design a compact dual-cup coffee brewing machine, covering mechanical structure, internal water pathways, heat management, and interface design.",
       "year": "2025",
-      "image": "/images/who-we-are.png",
+      "image": "/images/uploads/1751997589917_Smart_Coffee_Maker_Full_Internal_Design_1.jpg",
       "status": "published",
       "createdAt": "2025-07-07T19:38:55.201Z",
-      "updatedAt": "2025-07-07T19:38:55.201Z",
+      "updatedAt": "2025-07-08T17:59:53.252Z",
       "images": [
-        "/images/who-we-are.png"
+        "/images/uploads/1751997591212_Smart_Coffee_Maker_Full_Internal_Design_1.jpg"
       ],
       "client": "Consumer Appliance Startup (Confidential)",
       "industry": "Smart Home / Kitchen Appliances",
@@ -404,12 +415,14 @@
       "category": "Precision Manufacturing & Fabrication",
       "description": "To design and manufacture a high-precision steel mold for a traditional folding hand fan, suitable for mass production using injection molding techniques.",
       "year": "2023",
-      "image": "/images/who-we-are.png",
+      "image": "/images/uploads/1751997221526_Folding_Hand_Fan_Mold_Design___Fabrication_1.jfif",
       "status": "published",
       "createdAt": "2025-07-07T19:42:36.812Z",
-      "updatedAt": "2025-07-07T19:51:11.905Z",
+      "updatedAt": "2025-07-08T18:00:11.115Z",
       "images": [
-        "/images/who-we-are.png"
+        "/images/uploads/1751997227912_Folding_Hand_Fan_Mold_Design___Fabrication_1.jfif",
+        "/images/uploads/1751997229371_Folding_Hand_Fan_Mold_Design___Fabrication_2.jfif",
+        "/images/uploads/1751997230911_Folding_Hand_Fan_Mold_Design___Fabrication_3.jfif"
       ],
       "client": "Consumer Product Manufacturer (India)",
       "industry": "Plastic Product Manufacturing / Tooling",
@@ -447,12 +460,14 @@
       "category": "Precision Manufacturing & Fabrication",
       "description": "To develop a precision-machined mold for PET bottle blow molding, ensuring accurate volume formation, neck finish, and durability under repetitive production cycles.\n",
       "year": "2024",
-      "image": "/images/who-we-are.png",
+      "image": "/images/uploads/1751997629327_PET_Bottle_Blow_Mold_Design___Fabrication_1.jpg",
       "status": "published",
       "createdAt": "2025-07-07T19:45:23.751Z",
-      "updatedAt": "2025-07-07T19:51:03.857Z",
+      "updatedAt": "2025-07-08T18:00:36.286Z",
       "images": [
-        "/images/who-we-are.png"
+        "/images/uploads/1751997630848_PET_Bottle_Blow_Mold_Design___Fabrication_1.jpg",
+        "/images/uploads/1751997633007_PET_Bottle_Blow_Mold_Design___Fabrication_2.jpg",
+        "/images/uploads/1751997634587_PET_Bottle_Blow_Mold_Design___Fabrication_3.jpg"
       ],
       "client": "Beverage Packaging Supplier (Thailand)",
       "industry": "Plastic Blow Molding / Packaging",
@@ -486,16 +501,18 @@
     },
     {
       "id": "1751917663216ihkbj35ay",
-      "title": " L-Joint Mold Design & Fabrication",
+      "title": " L-Joint Mold Design & Fabrication for injection mold",
       "category": "Precision Manufacturing & Fabrication",
       "description": "To develop a robust injection mold for producing L-shaped pipe joints, ensuring tight dimensional tolerances and a smooth internal flow path for industrial use.\n",
       "year": "2025",
-      "image": "/images/who-we-are.png",
+      "image": "/images/uploads/1751997652526_L-Joint_Mold_Design___Fabrication_1.jpg",
       "status": "published",
       "createdAt": "2025-07-07T19:47:43.216Z",
-      "updatedAt": "2025-07-07T19:47:43.216Z",
+      "updatedAt": "2025-07-08T18:14:16.746Z",
       "images": [
-        "/images/who-we-are.png"
+        "/images/uploads/1751997653796_L-Joint_Mold_Design___Fabrication_1.jpg",
+        "/images/uploads/1751997655277_L-Joint_Mold_Design___Fabrication_2.jpg",
+        "/images/uploads/1751997656506_L-Joint_Mold_Design___Fabrication_3.jpg"
       ],
       "client": "Industrial Fitting Manufacturer (Sri Lanka)",
       "industry": "Plastic Injection Molding / Plumbing Components",
@@ -533,12 +550,13 @@
       "category": "Precision Manufacturing & Fabrication",
       "description": "To design and manufacture a multi-cavity injection mold for producing lightweight, single-use yoghurt spoons with a smooth surface finish and consistent shape.\n",
       "year": "2025",
-      "image": "/images/who-we-are.png",
+      "image": "/images/uploads/1751997677629_Yoghurt_Spoon_Mold_Design___Manufacturing_1.jpg",
       "status": "published",
       "createdAt": "2025-07-07T19:50:18.944Z",
-      "updatedAt": "2025-07-07T19:50:18.944Z",
+      "updatedAt": "2025-07-08T18:01:22.868Z",
       "images": [
-        "/images/who-we-are.png"
+        "/images/uploads/1751997678827_Yoghurt_Spoon_Mold_Design___Manufacturing_1.jpg",
+        "/images/uploads/1751997681344_Yoghurt_Spoon_Mold_Design___Manufacturing_2.jpg"
       ],
       "client": "Dairy Product Supplier (Sri Lanka)",
       "industry": "Food Packaging / Plastic Injection Molding",
@@ -570,6 +588,53 @@
         "CNCManufacturing",
         "MoldDesign"
       ]
+    },
+    {
+      "id": "17519982329338m9bra610",
+      "title": "Kohu-Bath Packing Machine Design Hygienic and Efficient Packing",
+      "category": "R&D and Innovation",
+      "description": "To design a fully automated machine for hygienic and efficient packing of \"Kohu-Bath\" - a traditional Sri Lankan herbal rice dish - for commercial-scale operations, including international export readiness.",
+      "year": "2025",
+      "image": "/images/uploads/1751998162410_Kohu-Bath_Packing_Machine_Design_1.jpg",
+      "status": "published",
+      "createdAt": "2025-07-08T18:10:32.933Z",
+      "updatedAt": "2025-07-08T18:15:07.933Z",
+      "images": [
+        "/images/uploads/1751998177888_Kohu-Bath_Packing_Machine_Design_1.jpg",
+        "/images/uploads/1751998181210_Kohu-Bath_Packing_Machine_Design_2.jpg",
+        "/images/uploads/1751998182601_Kohu-Bath_Packing_Machine_Design_3.jpg",
+        "/images/uploads/1751998185605_Kohu-Bath_Packing_Machine_Design_4.png"
+      ],
+      "client": "Confidential (USA)",
+      "industry": "Food Packaging / Automation",
+      "objective": "To design a fully automated machine for hygienic and efficient packing of \"Kohu-Bath\" - a traditional Sri Lankan herbal rice dish - for commercial-scale operations, including international export readiness.",
+      "engineeringInsight": "This project highlighted Enginaro's ability to blend traditional food culture with modern design automation, creating a robust, export-ready solution. It also served as a benchmark for future projects involving robotic and semi-automated food-grade machines",
+      "scopeOfWork": [
+        "Complete machine design",
+        "Structural frame modeling and ergonomic bin layout",
+        "Functional simulation of conveyor flow and packaging mechanisms",
+        "Strength analysis for load-bearing frames",
+        "3D rendering for presentation and manufacturing"
+      ],
+      "challenges": [
+        "Designing a stable, food-safe frame while ensuring modularity",
+        "Handling movement control and part sorting in a compact footprint",
+        "Ensuring structural rigidity for bin support and mechanical arm integration",
+        "Minimizing assembly complexity for on-site installation"
+      ],
+      "deliverables": [
+        "Detailed 3D CAD assembly and exploded views",
+        "Manufacturing-ready technical drawings",
+        "Stress analysis reports",
+        "Client-approved concept renderings for investor presentation",
+        "Final model optimized for fabrication and hygiene compliance"
+      ],
+      "tags": [
+        "MechanicalEngineering",
+        "Automation",
+        "FoodMachinery",
+        "KohuBath"
+      ]
     }
   ],
   "categories": [
@@ -582,5 +647,5 @@
     "R&D and Innovation",
     "Structural & Civil Engineering"
   ],
-  "lastUpdated": "2025-07-07T20:02:36.458Z"
+  "lastUpdated": "2025-07-08T18:15:07.933Z"
 }
