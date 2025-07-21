@@ -9,7 +9,7 @@
       "image": "/images/uploads/1751997314444_Student_Competition_Robot_Design_1.jpg",
       "status": "published",
       "createdAt": "2024-01-01T00:00:00Z",
-      "updatedAt": "2025-07-08T18:11:55.347Z",
+      "updatedAt": "2025-07-21T15:23:17.060Z",
       "images": [
         "/images/uploads/1751997316501_Student_Competition_Robot_Design_1.jpg"
       ],
@@ -32,14 +32,12 @@
       ],
       "deliverables": [
         "Fully modeled robot chassis and drive system",
-        "SolidWorks source files for reuse in classroom settings",
         "Documentation for student assembly and part functions",
-        "Images and animated walkthrough for virtual classroom use"
+        "Images and an animated walkthrough for virtual classroom use"
       ],
       "tags": [
         "Robotics",
         "Education",
-        "SolidWorks",
         "Mechanical Design",
         "Prototyping",
         "Modular Design"
@@ -646,5 +644,5 @@
     "R&D and Innovation",
     "Structural & Civil Engineering"
   ],
-  "lastUpdated": "2025-07-08T19:26:14.457Z"
+  "lastUpdated": "2025-07-21T15:23:17.060Z"
 }

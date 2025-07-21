@@ -167,18 +167,18 @@ const Footer = () => {
                   <motion.div variants={fadeInUp} className="flex gap-2">
                     <MapPin className="text-white w-6 h-6 flex-shrink-0" />
                     <p className="text-white text-sm">
-                      No 07, Beddagama Road, Sri Jayawardhanapura Kotte, Colombo, Sri Lanka.
+                      No 07, Beddagana Road, Sri Jayawardhanapura Kotte, Colombo, Sri Lanka.
                     </p>
                   </motion.div>
                   <motion.div variants={fadeInUp} className="flex gap-2 items-center">
                     <Mail className="text-white w-6 h-6 flex-shrink-0" />
-                    <a href="mailto:enginaroindustrialsolutions@gmail.com" className="text-white text-sm hover:text-gray-300 transition-colors">
+                    <a href="mailto:contact@enginaro.com" className="text-white text-sm hover:text-gray-300 transition-colors">
                       contact@enginaro.com
                     </a>
                   </motion.div>
                   <motion.div variants={fadeInUp} className="flex gap-2 items-center">
                     <Phone className="text-white w-6 h-6 flex-shrink-0" />
-                    <a href="tel:+94077000000" className="text-white text-sm hover:text-gray-300 transition-colors">
+                    <a href="tel:+94771721434" className="text-white text-sm hover:text-gray-300 transition-colors">
                       +94 77 172 1434
                     </a>
                   </motion.div>
