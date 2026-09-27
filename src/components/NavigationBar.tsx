@@ -7,6 +7,15 @@ import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { fadeIn, fadeInUp, staggerContainer } from '@/utils/animations';
 
+// Contact is rendered separately as the highlighted button at the end
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/services', label: 'Services' },
+  { href: '/industries', label: 'Industries' },
+  { href: '/engineering-talks', label: 'Engineering Talks' },
+  { href: '/about', label: 'About' },
+];
+
 const NavigationBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -142,53 +151,18 @@ const NavigationBar = () => {
               animate="visible"
               className="flex space-x-4"
             >
-              {/* Home Button (Active) */}
-              <motion.div variants={fadeInUp}>
-                <Link href="/" className="w-[122px] h-12 flex items-center justify-center nav-link font-secondary">
-                  <motion.span 
-                    whileHover={{ scale: 1.1 }}
-                    className="text-white"
-                  >
-                    Home
-                  </motion.span>
-                </Link>
-              </motion.div>
-              
-              {/* About Button */}
-              <motion.div variants={fadeInUp}>
-                <Link href="/about" className="w-[122px] h-12 flex items-center justify-center nav-link font-secondary">
-                  <motion.span 
-                    whileHover={{ scale: 1.1 }}
-                    className="text-white"
-                  >
-                    About Us
-                  </motion.span>
-                </Link>
-              </motion.div>
-              
-              {/* Services Button */}
-              <motion.div variants={fadeInUp}>
-                <Link href="/services" className="w-[122px] h-12 flex items-center justify-center nav-link font-secondary">
-                  <motion.span 
-                    whileHover={{ scale: 1.1 }}
-                    className="text-white"
-                  >
-                    Services
-                  </motion.span>
-                </Link>
-              </motion.div>
-              
-              {/* Blog Button */}
-              <motion.div variants={fadeInUp}>
-                <Link href="/projects" className="w-[122px] h-12 flex items-center justify-center nav-link font-secondary">
-                  <motion.span 
-                    whileHover={{ scale: 1.1 }}
-                    className="text-white"
-                  >
-                    Projects
-                  </motion.span>
-                </Link>
-              </motion.div>
+              {navLinks.map((link) => (
+                <motion.div key={link.href} variants={fadeInUp}>
+                  <Link href={link.href} className="min-w-[122px] px-3 h-12 flex items-center justify-center nav-link font-secondary whitespace-nowrap">
+                    <motion.span
+                      whileHover={{ scale: 1.1 }}
+                      className="text-white"
+                    >
+                      {link.label}
+                    </motion.span>
+                  </Link>
+                </motion.div>
+              ))}
             </motion.div>
           </div>
           
@@ -240,30 +214,14 @@ const NavigationBar = () => {
               className="flex flex-col space-y-8 items-center"
             >
               {/* Mobile Navigation Links */}
-              <motion.div variants={fadeInUp}>
-                <Link href="/" className="text-2xl font-semibold text-white hover:text-primary transition-colors duration-300" onClick={toggleMenu}>
-                  Home
-                </Link>
-              </motion.div>
-              
-              <motion.div variants={fadeInUp}>
-                <Link href="/about" className="text-2xl font-semibold text-white hover:text-primary transition-colors duration-300" onClick={toggleMenu}>
-                  About Us
-                </Link>
-              </motion.div>
-              
-              <motion.div variants={fadeInUp}>
-                <Link href="/services" className="text-2xl font-semibold text-white hover:text-primary transition-colors duration-300" onClick={toggleMenu}>
-                  Services
-                </Link>
-              </motion.div>
-              
-              <motion.div variants={fadeInUp}>
-                <Link href="/projects" className="text-2xl font-semibold text-white hover:text-primary transition-colors duration-300" onClick={toggleMenu}>
-                  Projects
-                </Link>
-              </motion.div>
-              
+              {navLinks.map((link) => (
+                <motion.div key={link.href} variants={fadeInUp}>
+                  <Link href={link.href} className="text-2xl font-semibold text-white hover:text-primary transition-colors duration-300" onClick={toggleMenu}>
+                    {link.label}
+                  </Link>
+                </motion.div>
+              ))}
+
               {/* Mobile Contact Button */}
               <motion.div 
                 variants={fadeInUp} 

@@ -36,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark:bg-[#000000]">
+    <html lang="en" className="dark:bg-[#000000]" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased relative bg-background dark:bg-[#000000]`}
         suppressHydrationWarning={true}
