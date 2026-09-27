@@ -5,11 +5,55 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Wrench, Zap, ArrowUpRight, Users, Award, Lightbulb } from 'lucide-react';
+import { Wrench, Zap, ArrowUpRight, Users, Award, Lightbulb, Printer, Cylinder } from 'lucide-react';
 import { staggerContainer, fadeInUp } from '@/utils/animations';
 import NavigationBar from '@/components/NavigationBar';
 import Footer from '@/components/Footer';
 import WhoWeAreImage from '@/images/who-we-are.png';
+
+interface Business {
+  icon: React.ElementType;
+  name: string;
+  tagline: string;
+  paragraphs: string[];
+  listLabel: string;
+  listItems: string[];
+  linkLabel: string;
+  // The button is hidden until a URL is set
+  url: string;
+}
+
+const businesses: Business[] = [
+  {
+    icon: Printer,
+    name: 'Ministry of 3D Print',
+    tagline: 'From Concept to Reality.',
+    paragraphs: [
+      'Ministry of 3D Print is a specialized business unit of Enginaro (Pvt) Ltd focused on professional additive manufacturing and 3D printing solutions.',
+      'The business supports individuals, startups, engineers, product developers, and industrial clients with high-quality 3D printing, rapid prototyping, custom components, engineering parts, enclosures, functional prototypes, and small-batch production.',
+      'By combining engineering knowledge with modern additive manufacturing technology, Ministry of 3D Print helps transform ideas and digital designs into accurate, functional physical products.',
+    ],
+    listLabel: 'Key Capabilities:',
+    listItems: ['3D Printing', 'Rapid Prototyping', 'Functional Parts', 'Custom Components', 'Product Development Support', 'Small-Batch Manufacturing'],
+    linkLabel: 'Visit Ministry of 3D Print',
+    url: '',
+  },
+  {
+    icon: Cylinder,
+    name: 'SunDi Products',
+    tagline: 'Reliable Materials for Better 3D Printing.',
+    paragraphs: [
+      'SunDi Products is a 3D printing materials and product brand developed within the Enginaro business ecosystem.',
+      'SunDi focuses on providing reliable, high-quality filament and related 3D printing products for professionals, businesses, educational institutions, makers, and the growing additive manufacturing community.',
+      'The product range includes materials such as PLA+, PETG, ABS, TPU and other specialized filament categories, with an emphasis on consistent printing performance, dependable quality, and practical solutions for different applications.',
+      'Through SunDi, Enginaro aims to support the continued development and accessibility of additive manufacturing technologies in Sri Lanka.',
+    ],
+    listLabel: 'Product Categories:',
+    listItems: ['PLA+', 'PETG', 'ABS', 'TPU', 'Specialty Filaments', '3D Printing Products'],
+    linkLabel: 'Explore SunDi Products',
+    url: '',
+  },
+];
 
 const AboutPage = () => {
   return (
@@ -433,7 +477,29 @@ const AboutPage = () => {
             ))}
           </div>
         </section>
-        
+
+        {/* Our Businesses Section */}
+        <section className="w-full max-w-[1300px] mx-auto py-16 px-4 md:px-6">
+          <ScrollAnimatedSection>
+            <div className="max-w-[800px] mx-auto text-center mb-16">
+              <span className="text-primary font-secondary uppercase tracking-wider">Business Units</span>
+              <h2 className="text-4xl font-bold text-black dark:text-white font-primary mt-4 mb-6">
+                Our Businesses
+              </h2>
+              <p className="text-[#3D3D3D] dark:text-white text-lg font-secondary">
+                Beyond our core engineering and technology services, Enginaro continues to expand into specialized
+                business areas that support product development, additive manufacturing, and advanced manufacturing technologies.
+              </p>
+            </div>
+          </ScrollAnimatedSection>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {businesses.map((business, index) => (
+              <BusinessCard key={business.name} business={business} index={index} />
+            ))}
+          </div>
+        </section>
+
         {/* Our Team Section - HIDDEN (Uncomment to show in future) */}
         {/*
         <section className="w-full max-w-[1300px] mx-auto py-16 px-4 md:px-6">
@@ -569,6 +635,72 @@ const ValueCard = ({
       
       <h3 className="text-2xl font-bold text-black dark:text-white font-primary mb-3">{title}</h3>
       <p className="text-[#3D3D3D] dark:text-white font-secondary">{description}</p>
+    </motion.div>
+  );
+};
+
+const BusinessCard = ({ business, index }: { business: Business; index: number }) => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const Icon = business.icon;
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      transition={{ duration: 0.5, delay: 0.1 * index }}
+      className="bg-white dark:bg-[#1B1B1B] rounded-3xl p-6 md:p-10 flex flex-col"
+    >
+      <motion.div
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={inView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }}
+        transition={{ duration: 0.4, delay: 0.2 + (0.1 * index) }}
+        className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6"
+      >
+        <Icon size={24} strokeWidth={1.5} className="text-primary" />
+      </motion.div>
+
+      <h3 className="text-3xl font-bold text-black dark:text-white font-primary mb-2">{business.name}</h3>
+      <p className="text-primary text-lg font-secondary font-semibold mb-6">{business.tagline}</p>
+
+      <div className="space-y-4 mb-8">
+        {business.paragraphs.map((paragraph) => (
+          <p key={paragraph} className="text-[#3D3D3D] dark:text-white text-lg font-secondary">{paragraph}</p>
+        ))}
+      </div>
+
+      <h4 className="text-xl font-bold text-black dark:text-white font-primary mb-4">{business.listLabel}</h4>
+      <div className="flex flex-wrap gap-2 mb-8">
+        {business.listItems.map((item) => (
+          <span
+            key={item}
+            className="bg-gray-100 dark:bg-[#292929] text-black dark:text-white rounded-full py-2 px-4 text-sm font-secondary"
+          >
+            {item}
+          </span>
+        ))}
+      </div>
+
+      {business.url && (
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="w-fit mt-auto"
+        >
+          <a
+            href={business.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-primary text-white rounded-full py-4 px-8 flex items-center justify-center w-fit gap-2 hover:bg-opacity-90 transition-all font-secondary"
+          >
+            <span>{business.linkLabel}</span>
+            <ArrowUpRight size={20} strokeWidth={1.5} className="text-white" />
+          </a>
+        </motion.div>
+      )}
     </motion.div>
   );
 };
